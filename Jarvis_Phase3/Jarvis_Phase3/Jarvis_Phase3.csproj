@@ -130,23 +130,110 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\CreateTables.sql" />
+    <Content Include="App_Data\INSERT.sql" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\customStyles\about-support.css" />
+    <Content Include="Content\customStyles\dashTheme.css" />
+    <Content Include="Content\customStyles\footer.css" />
+    <Content Include="Content\customStyles\login.css" />
+    <Content Include="Content\customStyles\RegisterForm.css" />
+    <Content Include="Content\dashTheme\css\bootstrap-rtl.css" />
+    <Content Include="Content\dashTheme\css\bootstrap-rtl.min.css" />
+    <Content Include="Content\dashTheme\css\bootstrap.css" />
+    <Content Include="Content\dashTheme\css\bootstrap.min.css" />
+    <Content Include="Content\dashTheme\css\plugins\morris.css" />
+    <Content Include="Content\dashTheme\css\sb-admin-rtl.css" />
+    <Content Include="Content\dashTheme\css\sb-admin.css" />
+    <Content Include="Content\dashTheme\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\dashTheme\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\dashTheme\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\dashTheme\js\bootstrap.js" />
+    <Content Include="Content\dashTheme\js\bootstrap.min.js" />
+    <Content Include="Content\dashTheme\js\jquery.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\flot-data.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\dashTheme\js\plugins\morris\morris-data.js" />
+    <Content Include="Content\dashTheme\js\plugins\morris\morris.js" />
+    <Content Include="Content\dashTheme\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\dashTheme\js\plugins\morris\raphael.min.js" />
+    <Content Include="Content\scrollTheme\css\bootstrap.css" />
+    <Content Include="Content\scrollTheme\css\bootstrap.min.css" />
+    <Content Include="Content\scrollTheme\css\scrolling-nav.css" />
+    <Content Include="Content\scrollTheme\js\bootstrap.js" />
+    <Content Include="Content\scrollTheme\js\bootstrap.min.js" />
+    <Content Include="Content\scrollTheme\js\jquery.easing.min.js" />
+    <Content Include="Content\scrollTheme\js\jquery.js" />
+    <Content Include="Content\scrollTheme\js\scrolling-nav.js" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="scripts\ai.0.15.0-build58334.js" />
-    <Content Include="scripts\ai.0.15.0-build58334.min.js" />
-    <Content Include="scripts\bootstrap.js" />
-    <Content Include="scripts\bootstrap.min.js" />
-    <None Include="scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="scripts\jquery-1.10.2.js" />
-    <Content Include="scripts\jquery-1.10.2.min.js" />
-    <Content Include="scripts\modernizr-2.6.2.js" />
+    <Content Include="images\api-data.PNG" />
+    <Content Include="images\electrical_consumption_chart.jpg" />
+    <Content Include="images\energy.PNG" />
+    <Content Include="images\floor_plan.png" />
+    <Content Include="images\graph-image.png" />
+    <Content Include="images\hand-streched-palm-512.png" />
+    <Content Include="images\icons-butler.png" />
+    <Content Include="images\logov1.png" />
+    <Content Include="images\man-coffee-cup-pen.jpg" />
+    <Content Include="images\man-with-laptop-chalkboard-thinking.jpg" />
+    <Content Include="images\mobile-icons-background.jpg" />
+    <Content Include="images\Pie_Chart.jpg" />
+    <Content Include="images\providers-data.PNG" />
+    <Content Include="images\sales.PNG" />
+    <Content Include="images\smart-home.png" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\dashTheme\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\dashTheme\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\dashTheme\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\dashTheme\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\dashTheme\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\core.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\icons.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\larger.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\list.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\mixins.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\path.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\spinning.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\stacked.less" />
+    <Content Include="Content\dashTheme\font-awesome\less\variables.less" />
+    <Content Include="Content\dashTheme\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_core.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_list.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_path.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\dashTheme\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\dashTheme\fonts\glyphicons-halflings-regular.woff2" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\AboutSupport.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Support.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\DashTest.cshtml" />
@@ -164,12 +251,20 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BusinessLogic\MailHelper.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Devices\CameraVM.cs" />
+    <Compile Include="Models\Devices\SmokeAlarmVM.cs" />
+    <Compile Include="Models\Devices\ThermostatVM.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\RegisteredUser.cs" />
+    <Compile Include="Models\UserAccountVM.cs" />
+    <Compile Include="Models\UserRole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -184,7 +279,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Shared\_ScrollTheme.cshtml" />
+    <Content Include="Views\Shared\_DashBoardTheme.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,8 +290,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
     <Folder Include="Views\Provider\" />
   </ItemGroup>
   <PropertyGroup>
