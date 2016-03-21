@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    
     <script src="~/Scripts/bootstrap.min.js"></script>
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -64,18 +64,18 @@
                             <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#support")"> Support </a></li>
                         }
                     }
-
+                   
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Documentation<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="https://docs.google.com/document/d/1Rt0qJCFHvw4oCFp6WCll64OovxDYAaqTC2Pz_-rd-cY/edit" target="_blank">Project Documentation</a></li>
-                            <li><a href="http://ajkm.kpawa.com/"> Original Prototype </a></li>
+                            <li><a href="https://docs.google.com/document/d/1L5HJbsoXe5cHk6a0731RoZDsJb-6g3f_bKoEmClmU8U/edit" target="_blank">Project Documentation</a></li>
+                            <li><a href="http://ajkm.kpawa.com/" target="_blank"> Original Prototype </a></li>                          
                             <li>@Html.ActionLink("API", "API", "Home", null, null)</li>
-
+                            
                         </ul>
-                    </li>
+                    </li>                 
                     @{
                         if (!Request.IsAuthenticated)
                         {
@@ -108,7 +108,7 @@
                     <li><a href="#"> NEST </a></li>
                     <li><a href="#"> Phillips </a></li>
                     <li><a href="#"> Amazon </a></li>
-                </ul>
+                </ul>   
             </div>
             <div class="col-sm-4">
                 <h4> Company </h4>
@@ -126,10 +126,10 @@
                 <a href="#"> <i class="fa fa-twitter"></i> </a>
                 <a href="#"> <i class="fa fa-linkedin"></i> </a>
             </div>
-            <hr />
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+                <hr />
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </div>
-    </footer>
+    </footer>  
     <script src="~/Content/scrollTheme/js/jquery.easing.min.js"></script>
     <script src="~/Content/scrollTheme/js/scrolling-nav.js"></script>
     @RenderSection("Scripts", false)
