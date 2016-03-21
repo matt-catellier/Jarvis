@@ -3,6 +3,7 @@ NEST ACCESS TOKEN - c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQ
 
 MATTS NEST THERMOSTAT ID - is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq
 
-DB ACCOUNT LOGINS matt - 12345678 kully - 12345678 jalen - 12345678 andrewhui - 12345678
+DB ACCOUNT LOGINS (all user the same one) - we should hide this info, or someone can delete allof our stuff
+user: jarvis_admin pass:12345678
 
 FTP ACCOUNT jarvis - 12345678
