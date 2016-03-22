@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="firstname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="lastname" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="birthdate" Type="date" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Details">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="int" Nullable="false" />
+    <Property Name="familysize" Type="int" />
+    <Property Name="children" Type="int" />
+    <Property Name="adults" Type="int" />
+    <Property Name="rooms" Type="int" />
+    <Property Name="address" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="deviceID" />
+    </Key>
+    <Property Name="deviceID" Type="int" Nullable="false" />
+    <Property Name="category" Type="varchar" MaxLength="255" />
+    <Property Name="accountID" Type="int" Nullable="false" />
+    <Property Name="dataID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DeviceData">
+    <Key>
+      <PropertyRef Name="dataID" />
+    </Key>
+    <Property Name="dataID" Type="int" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="kwhour" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProviderAccount">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="int" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="provider" Type="varchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="StoredData">
+    <Key>
+      <PropertyRef Name="deviceID" />
+    </Key>
+    <Property Name="deviceID" Type="int" Nullable="false" />
+    <Property Name="state" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="datetime" Type="datetime" />
+  </EntityType>
+  <Association Name="FK__Details__account__1367E606">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Details" Type="Self.Details" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="Details">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Device__accountI__1B0907CE">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Device" Type="Self.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Device__dataID__1BFD2C07">
+    <End Role="DeviceData" Type="Self.DeviceData" Multiplicity="1" />
+    <End Role="Device" Type="Self.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceData">
+        <PropertyRef Name="dataID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="dataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProviderA__accou__164452B1">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="ProviderAccount" Type="Self.ProviderAccount" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="ProviderAccount">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StoredDat__devic__1FCDBCEB">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="StoredData" Type="Self.StoredData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="deviceID" />
+      </Principal>
+      <Dependent Role="StoredData">
+        <PropertyRef Name="deviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="Account" EntityType="Self.Account" Schema="j_admin" store:Type="Tables" />
+    <EntitySet Name="Details" EntityType="Self.Details" Schema="j_admin" store:Type="Tables" />
+    <EntitySet Name="Device" EntityType="Self.Device" Schema="j_admin" store:Type="Tables" />
+    <EntitySet Name="DeviceData" EntityType="Self.DeviceData" Schema="j_admin" store:Type="Tables" />
+    <EntitySet Name="ProviderAccount" EntityType="Self.ProviderAccount" Schema="j_admin" store:Type="Tables" />
+    <EntitySet Name="StoredData" EntityType="Self.StoredData" Schema="j_admin" store:Type="Tables" />
+    <AssociationSet Name="FK__Details__account__1367E606" Association="Self.FK__Details__account__1367E606">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Details" EntitySet="Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Device__accountI__1B0907CE" Association="Self.FK__Device__accountI__1B0907CE">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="Device" EntitySet="Device" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Device__dataID__1BFD2C07" Association="Self.FK__Device__dataID__1BFD2C07">
+      <End Role="DeviceData" EntitySet="DeviceData" />
+      <End Role="Device" EntitySet="Device" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProviderA__accou__164452B1" Association="Self.FK__ProviderA__accou__164452B1">
+      <End Role="Account" EntitySet="Account" />
+      <End Role="ProviderAccount" EntitySet="ProviderAccount" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StoredDat__devic__1FCDBCEB" Association="Self.FK__StoredDat__devic__1FCDBCEB">
+      <End Role="Device" EntitySet="Device" />
+      <End Role="StoredData" EntitySet="StoredData" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

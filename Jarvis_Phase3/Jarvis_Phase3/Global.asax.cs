@@ -7,6 +7,7 @@ using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
 using System.Web.Http;
+using System.Web.Helpers;
 
 namespace Jarvis_Phase3
 {
@@ -14,10 +15,20 @@ namespace Jarvis_Phase3
     {
         void Application_Start(object sender, EventArgs e)
         {
-            // Code that runs on application startup
+            // for authentication
+            AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
+
+            // for JSON
+            //GlobalConfiguration.Configure(WebApiConfig.Register);
+            //GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings
+            //.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+
+            // default
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);            
+            RouteConfig.RegisterRoutes(RouteTable.Routes);      
+            
+                  
         }
     }
 }

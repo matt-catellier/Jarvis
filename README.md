@@ -12,7 +12,11 @@ NEST ACCESS TOKEN - c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQ
 
 MATTS NEST THERMOSTAT ID - is8MQBKrH-h-UWxetdv7-o-BBzEt2ynq
 
-DB ACCOUNT LOGINS
-user: admin_jarvis pass: 12345678
+DB ACCOUNT LOGINS (had to set up a new DB on my arvixe account)
+user: j_admin 
 
-FTP ACCOUNT jarvis - 12345678
+FTP ACCOUNT (for kullies arvixe):
+user: jarvis 
+
+NOTE: we all know the passwords for these (hint: numbers... simple...)
+
