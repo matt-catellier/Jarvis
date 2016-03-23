@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+}
+<div class="home-page clearfix">
+    <div class="col-sm-12 home-writeup">
+        <div class="col-sm-6">
+            <h1> Jarvis - Smart Butler </h1>
+            <h4> Manage all your smart devices through a single dashboard. </h4>
+            <h4> View device data and power usage for each device. </h4>
+            <h4> See the cost of each device. </h4>
+            <h4> Use our insights to cut down on costs. </h4>
+            <div class="links">
+                <div class="col-sm-6">
+                    @Html.ActionLink("Login >", "Login", "Accounts")
+                </div>
+                <div class="col-sm-6">
+                    <a href="@Url.Action("Register", "Accounts")"> Register ></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <img class="home-background" src="~/images/smart-home.png" />
+        </div>
+    </div>
+    <div class="about-support-container clearfix">
+        <div class="col-sm-6 ">
+            <div id="about" class="home-writeup">
+                <h2> About us </h2>
+                <p>
+                    With the proliferation Wi-Fi connected devices in our homes it's becoming increasingly difficult to
+                    monitor and manage all your various smart locks, lights, thermostats, etc. With Jarvis we simplify the
+                    use of multiple smart devices by giving you a single, easy-to-use, cross-platform interface that enables
+                    you to quickly see what's going on and to remotely change the settings of all your smart devices with just a few clicks.
+                </p>
+                <div class="links clearfix">
+                    <div class="col-sm-6">
+                        <a href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#about")"> About ></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div id="support" class="home-writeup">
+                <h2> Support </h2>
+                <p> Got any questions? We have great customer service.  Contact us and well help you out! </p>
+                <div class="links clearfix">
+                    <div class="col-sm-6">
+                        <a href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#faq")"> FAQ ></a>
+                    </div>
+                    <div class="col-sm-6">
+                        <a href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#contact")"> Contact ></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="providers clearfix">
+        <div class="col-sm-4 col-xs-12 home-writeup">
+            <h2> Nest </h2>
+            <p> Breif write up about Nest </p>
+            <div class="col-lg-6">
+                <a href="https://nest.com/"> Go to thier site > </a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 home-writeup">
+            <h2> Phillips Hue </h2>
+            <p> Breif write up about phillips </p>
+            <div class="col-lg-6">
+                <a href="http://www2.meethue.com/"> Go to thier site > </a>
+            </div>
+        </div>
+        <div class="col-sm-4 col-xs-12 home-writeup">
+            <h2> Amazon</h2>
+            <p> Breif write up about Amazon </p>
+            <div class="col-lg-6">
+                <a href="http://www.amazon.com/smarthome/"> Go to thier site > </a>
+            </div>
+
+        </div>
+    </div>
+    @*<div class="home-writeup-menu col-sm-5 home-writeup">
+            <h3>@Html.ActionLink("Login", "Login", "Accounts")</h3><br />
+            <h3>@Html.ActionLink("Sign-up for a free trial", "SignUp", "Accounts")</h3><br />
+            <h3>@Html.ActionLink("Learn more about Jarvis", "About")</h3><br />
+            <h3>@Html.ActionLink("Frequently Asked Questions", "FAQ")</h3><br />
+            <h3>@Html.ActionLink("Contact Us", "Contact")</h3><br />
+        </div>*@
+</div>
+@section Scripts {
+    <script>
+        $(function () {
+            var divs = $('.about-support-container > div > .home-writeup');
+            console.log(divs);
+
+            var height = 0;
+            $.each(divs, function () {
+                var currentHeight = $(this).height();
+                console.log(currentHeight)
+                if (currentHeight > height) {
+                    height = currentHeight;
+                }
+                $(this).height(height)
+            })
+        })
+    </script>
+}

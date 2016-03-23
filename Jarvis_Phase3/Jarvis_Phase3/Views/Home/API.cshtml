@@ -1,0 +1,55 @@
+﻿@{
+    ViewBag.Title = "API";
+    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+}
+
+@section Scripts {
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="~/Scripts/api/app.js"></script>
+}
+
+<div class="container clearfix">
+    <div class="col-md-6">
+        <h1> How to use Jarvis API:  </h1>
+        <p> Here is the URL: <a href="http://jarvis.kpawa.com/api/Providers">'http://jarvis.kpawa.com/api/Providers'</a></p>
+        <p> This is the shape of the JSON that will come back </p>
+        <img src="~/images/providers-data.PNG" />
+        <h3> Here is a sample javascript to make call to the API </h3>
+        <pre>
+            // TODO: Replace with the URL of your WebService app
+            var serviceUrl = 'http://jarvis.kpawa.com/Home/api/Providers'
+            // http://www.asp.net/web-api/overview/security/enabling-cross-origin-requests-in-web-api
+            function sendRequest() {
+                var method = $('#method').val();
+                $.ajax({
+                    type: method,
+                    url: serviceUrl
+                }).done(function (data) {
+	            for(var i = 0; i < data.users.length; i++) {
+		            callback(data.users[i]);
+	            }
+                }).error(function (jqXHR, textStatus, errorThrown) {
+                    $('#id').text(jqXHR.responseText || textStatus);
+                });
+            }
+            function callback(val) {
+                //  $("#providers").replaceWith("<span id='id'>(Result)</span>");
+                $("#id").replaceWith("<ul id='providers' />");
+                var str = "Username: " + val.Username + " Email: " + val.Email;
+                $('<li />', { text: str }).appendTo($('#providers'));
+            }    
+        </pre>
+    </div>
+    <div class="col-md-6">
+        <h2> Click the button to get data back </h2>
+        <form method="get" action="api/Accounts">
+            <input type="button" value="Get" onclick="sendRequest()" /> <br />
+            <div style="border: 1px solid black; min-height: 100px; margin: 10px; padding: 10px;">
+                <span id="value">(Result)<br /></span>
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+
+

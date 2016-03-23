@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "AdminDashBoard";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
+}
+
+
+<div class="row">
+    <p>@DateTime.Now.ToString("F")</p>
+    <div class="col-sm-8 page-content">
+        <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+        <p>@DateTime.Now.ToString("F")</p>
+        <div class="col-sm-6">
+            <h3> Manage Consumer Accounts </h3>
+            <ul>
+                <li>@Html.ActionLink("View all Consumer Accounts", "ViewAllConsumerAccounts")</li>
+                <li> Sign into Consumer Account </li>
+                <li> Create a new Consumer Account </li>
+                <li> Update a  Consumer Account Info </li>
+                <li> Delete a Consumer Account </li>
+            </ul>
+        </div>
+        <div class="col-sm-6">
+            <h3> Manage Providers </h3>
+            <ul>
+                <li> View all Providers </li>
+                <li> Sign into Provider Account </li>
+                <li> Create a new Provider Account </li>
+                <li> Edit a Provider Account Info </li>
+                <li> Delete a Provider Account </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+

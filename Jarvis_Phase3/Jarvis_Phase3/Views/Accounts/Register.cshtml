@@ -1,0 +1,76 @@
+﻿@model Jarvis_Phase3.Models.RegisteredUser
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+}
+@section Styles {
+    <style>
+        .body-content {
+            background-image: url('../../images/man-coffee-cup-pen.jpg');
+            color: silver;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+    </style>
+    <link href="~/Content/customStyles/RegisterForm.css" rel="stylesheet" />
+}
+<div class="container clearfix">
+    <div class="col-md-6 opac-black">
+        @Html.Partial("Partials/RegisterForm")
+    </div>
+
+
+    <div class="col-md-6">
+        <div class="panel opac-black">
+            <div class="panel-heading opac-black">
+                <strong class="">Cut-and-Paste Data</strong>
+
+            </div>
+
+            <div class="panel-body opac-black">
+                <table class="table table-condensed table-responsive col-sm-12 opac-black">
+                    <tr>
+                        <td>
+                            <p>
+                                To create a consumer: cut-and-paste the consumer data into the registration form fields.
+                                Please do the same with the admin account.
+                            </p>
+                            <p>
+                                Execute the SQL to create the new db and fill it with the new values (generate the
+                                device data). Remember, the SQL data should be replaced with the new ID/Account ID.
+                            </p>
+                            <p>
+                                Copy the IDs under the dbo.AspNetUsers and paste them into the matt.Account Table
+                                and the matt.Device Table.
+                            </p>
+                            <p>
+                                In order to access the admin area it's necessary to change the role of a user to be
+                                an admin by going to jarvis.kpawa.com/Accounts/AddUserToRole.
+                            </p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Role</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                    </tr>
+                    <tr>
+                        <td>admin</td>
+                        <td>admin</td>
+                        <td>password</td>
+                    </tr>
+                    <tr>
+                        <td>consumer</td>
+                        <td>consumer</td>
+                        <td>password</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

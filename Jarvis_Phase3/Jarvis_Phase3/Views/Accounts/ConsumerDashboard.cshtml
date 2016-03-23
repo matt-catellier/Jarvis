@@ -1,0 +1,131 @@
+﻿
+@{
+    ViewBag.Title = "ConsumerDashboard";
+    Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Dashboard <small>Statistics Overview</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> Dashboard
+            </li>
+        </ol>
+    </div>
+</div>
+<img style="width: 100%;" src="~/images/energy.PNG" />
+<div class="row">
+    <div class="col-lg-6">
+        <h2>Bordered Table</h2>
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>Visits</th>
+                        <th>% New Visits</th>
+                        <th>Revenue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>/index.html</td>
+                        <td>1265</td>
+                        <td>32.3%</td>
+                        <td>$321.33</td>
+                    </tr>
+                    <tr>
+                        <td>/about.html</td>
+                        <td>261</td>
+                        <td>33.3%</td>
+                        <td>$234.12</td>
+                    </tr>
+                    <tr>
+                        <td>/sales.html</td>
+                        <td>665</td>
+                        <td>21.3%</td>
+                        <td>$16.34</td>
+                    </tr>
+                    <tr>
+                        <td>/blog.html</td>
+                        <td>9516</td>
+                        <td>89.3%</td>
+                        <td>$1644.43</td>
+                    </tr>
+                    <tr>
+                        <td>/404.html</td>
+                        <td>23</td>
+                        <td>34.3%</td>
+                        <td>$23.52</td>
+                    </tr>
+                    <tr>
+                        <td>/services.html</td>
+                        <td>421</td>
+                        <td>60.3%</td>
+                        <td>$724.32</td>
+                    </tr>
+                    <tr>
+                        <td>/blog/post.html</td>
+                        <td>1233</td>
+                        <td>93.2%</td>
+                        <td>$126.34</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Morris Charts -->
+<div class="row">
+    <div class="col-lg-12 col-lg-4">
+        <h2 class="page-header">Morris Charts</h2>
+        <p class="lead">Morris.js is a very simple API for drawing line, bar, area and donut charts. For full usage instructions and documentation for Morris.js charts, visit <a href="http://morrisjs.github.io/morris.js/">http://morrisjs.github.io/morris.js/</a>.</p>
+    </div>
+</div>
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-12 col-lg-4">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Area Line Graph Example with Tooltips</h3>
+            </div>
+            <div class="panel-body">
+                <div id="morris-area-chart"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+
+<div class="row col-lg-4">
+    <div class="col-lg-4">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Donut Chart Example</h3>
+            </div>
+            <div class="panel-body">
+                <div id="morris-donut-chart"></div>
+                <div class="text-right">
+                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Line Graph Example with Tooltips</h3>
+            </div>
+            <div class="panel-body">
+                <div id="morris-line-chart"></div>
+                <div class="text-right">
+                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

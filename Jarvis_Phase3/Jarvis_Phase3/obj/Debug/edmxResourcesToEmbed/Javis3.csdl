@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Account">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="firstname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="birthdate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Detail" Relationship="Self.FK__Details__account__1367E606" FromRole="Account" ToRole="Details" />
+    <NavigationProperty Name="Devices" Relationship="Self.FK__Device__accountI__1B0907CE" FromRole="Account" ToRole="Device" />
+    <NavigationProperty Name="ProviderAccount" Relationship="Self.FK__ProviderA__accou__164452B1" FromRole="Account" ToRole="ProviderAccount" />
+  </EntityType>
+  <EntityType Name="Detail">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="Int32" Nullable="false" />
+    <Property Name="familysize" Type="Int32" />
+    <Property Name="children" Type="Int32" />
+    <Property Name="adults" Type="Int32" />
+    <Property Name="rooms" Type="Int32" />
+    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Details__account__1367E606" FromRole="Details" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="Device">
+    <Key>
+      <PropertyRef Name="deviceID" />
+    </Key>
+    <Property Name="deviceID" Type="Int32" Nullable="false" />
+    <Property Name="category" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="accountID" Type="Int32" Nullable="false" />
+    <Property Name="dataID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Device__accountI__1B0907CE" FromRole="Device" ToRole="Account" />
+    <NavigationProperty Name="DeviceData" Relationship="Self.FK__Device__dataID__1BFD2C07" FromRole="Device" ToRole="DeviceData" />
+    <NavigationProperty Name="StoredData" Relationship="Self.FK__StoredDat__devic__1FCDBCEB" FromRole="Device" ToRole="StoredData" />
+  </EntityType>
+  <EntityType Name="DeviceData">
+    <Key>
+      <PropertyRef Name="dataID" />
+    </Key>
+    <Property Name="dataID" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="kwhour" Type="Single" Nullable="false" />
+    <NavigationProperty Name="Devices" Relationship="Self.FK__Device__dataID__1BFD2C07" FromRole="DeviceData" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="ProviderAccount">
+    <Key>
+      <PropertyRef Name="accountID" />
+    </Key>
+    <Property Name="accountID" Type="Int32" Nullable="false" />
+    <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="provider" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__ProviderA__accou__164452B1" FromRole="ProviderAccount" ToRole="Account" />
+  </EntityType>
+  <EntityType Name="StoredData">
+    <Key>
+      <PropertyRef Name="deviceID" />
+    </Key>
+    <Property Name="deviceID" Type="Int32" Nullable="false" />
+    <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="datetime" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Device" Relationship="Self.FK__StoredDat__devic__1FCDBCEB" FromRole="StoredData" ToRole="Device" />
+  </EntityType>
+  <Association Name="FK__Details__account__1367E606">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Details" Type="Self.Detail" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="Details">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Device__accountI__1B0907CE">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="Device" Type="Self.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ProviderA__accou__164452B1">
+    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+    <End Role="ProviderAccount" Type="Self.ProviderAccount" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Account">
+        <PropertyRef Name="accountID" />
+      </Principal>
+      <Dependent Role="ProviderAccount">
+        <PropertyRef Name="accountID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Device__dataID__1BFD2C07">
+    <End Role="DeviceData" Type="Self.DeviceData" Multiplicity="1" />
+    <End Role="Device" Type="Self.Device" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DeviceData">
+        <PropertyRef Name="dataID" />
+      </Principal>
+      <Dependent Role="Device">
+        <PropertyRef Name="dataID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__StoredDat__devic__1FCDBCEB">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="StoredData" Type="Self.StoredData" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="deviceID" />
+      </Principal>
+      <Dependent Role="StoredData">
+        <PropertyRef Name="deviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Jarvis3Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accounts" EntityType="Self.Account" />
+    <EntitySet Name="Details" EntityType="Self.Detail" />
+    <EntitySet Name="Devices" EntityType="Self.Device" />
+    <EntitySet Name="DeviceDatas" EntityType="Self.DeviceData" />
+    <EntitySet Name="ProviderAccounts" EntityType="Self.ProviderAccount" />
+    <EntitySet Name="StoredDatas" EntityType="Self.StoredData" />
+    <AssociationSet Name="FK__Details__account__1367E606" Association="Self.FK__Details__account__1367E606">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Details" EntitySet="Details" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Device__accountI__1B0907CE" Association="Self.FK__Device__accountI__1B0907CE">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ProviderA__accou__164452B1" Association="Self.FK__ProviderA__accou__164452B1">
+      <End Role="Account" EntitySet="Accounts" />
+      <End Role="ProviderAccount" EntitySet="ProviderAccounts" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Device__dataID__1BFD2C07" Association="Self.FK__Device__dataID__1BFD2C07">
+      <End Role="DeviceData" EntitySet="DeviceDatas" />
+      <End Role="Device" EntitySet="Devices" />
+    </AssociationSet>
+    <AssociationSet Name="FK__StoredDat__devic__1FCDBCEB" Association="Self.FK__StoredDat__devic__1FCDBCEB">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="StoredData" EntitySet="StoredDatas" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

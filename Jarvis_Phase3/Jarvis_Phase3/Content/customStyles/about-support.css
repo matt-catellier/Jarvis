@@ -1,0 +1,52 @@
+﻿/*section .row {
+    position: relative;
+    left: -40px;
+    background: #EEEEE;
+    padding-top: 40px;
+}*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.body-content {
+    padding: 0px;
+}
+
+.row > div {
+    padding-left: 0px;
+}
+
+.row form {
+    padding: 0px;
+}
+
+section {
+    height: 100%;
+    padding: 100px 0px;
+    text-align: center;
+    background: #EEE;
+}
+
+.support-section {
+
+    background-color: lightseagreen;
+}
+
+.about-section {
+        background-color: cadetblue;    
+    margin: 0px;
+}
+.support-section h1 {
+    margin-bottom: 40px;
+}
+
+.faq-section {
+
+        background-color: #eee;
+}
+
+/*fieldset {
+    background-color: black; color: white; opacity: 0.8;
+}*/

@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "RegisterDevices";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <p>@DateTime.Now.ToString("F")</p>
+        <div class="col-sm-8 page-content">
+            <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+            <div>
+                <p>
+                    Enter in your login inforamtion for the provider's account and we will get a list
+                    of your registered devices.
+                </p>
+                <div>
+                    <h3>Currently Connected Devices: </h3>
+                    <ul>
+                        <li><a href="Edit Profile">NestLabs Thermostat</a></li>
+                        <li><a href="Edit Profile">WeMo Light #1</a></li>
+                        <li><a href="Edit Profile">WeMo Light #2</a></li>
+                        <li><a href="Edit Profile">June Intelligent Oven</a></li>
+                        <li><a href="Edit Profile">Apple TV</a></li>
+                    </ul>
+                </div>
+                <h3> Add New Device </h3>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                        Find New Provider
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li value="Nest Labs">Nest Labs</li>
+                        <li value="SmartThings">SmartThings</li>
+                        <li value="Belkin WeMo">Belkin WeMo</li>
+                        <li value="FitBit">FitBit</li>
+                        <li value="LG Electronics">LG Electronics</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                @{
+                    Html.RenderPartial("Partials/LoginForm");
+                }
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+﻿.body-content {
+    background-image: url('../../images/man-coffee-cup-pen.jpg');
+    color: silver;
+}
+
+.body-content h1 {
+    margin-left: 40px;       
+}
+
+.body-content .container > div {
+    margin: 10px;
+}
+
+table {
+    width: 100%;
+    color: #333;
+}

@@ -1,0 +1,29 @@
+﻿footer {
+    padding: 20px;
+    background: #7B858E;
+    color: #FFF;
+}
+
+footer a {
+    color: white;
+}
+
+.socail {
+    padding-top: 20px;
+    text-align: center;
+    color: #FFF;
+}
+.icons {
+    text-align: center;
+}
+
+.icons .fa {
+    font-size: 40px;
+    margin: 10px;
+    color:  white;
+}
+
+footer ul {
+    list-style-type: none;
+    padding-left: 5px;
+}

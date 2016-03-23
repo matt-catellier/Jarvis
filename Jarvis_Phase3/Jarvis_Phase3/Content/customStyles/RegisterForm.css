@@ -1,0 +1,11 @@
+﻿#FirstName, #LastName {
+    width: inherit;
+    max-width: 140px;
+    margin: 0;
+}
+
+.name-input {
+    display: inline-block;
+    float: left;
+    padding-left: 0px;
+}

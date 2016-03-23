@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="Jarvis3Entities">
+    <EntitySetMapping Name="Accounts">
+      <EntityTypeMapping TypeName="Model.Account">
+        <MappingFragment StoreEntitySet="Account">
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="birthdate" ColumnName="birthdate" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Details">
+      <EntityTypeMapping TypeName="Model.Detail">
+        <MappingFragment StoreEntitySet="Details">
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="familysize" ColumnName="familysize" />
+          <ScalarProperty Name="children" ColumnName="children" />
+          <ScalarProperty Name="adults" ColumnName="adults" />
+          <ScalarProperty Name="rooms" ColumnName="rooms" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Devices">
+      <EntityTypeMapping TypeName="Model.Device">
+        <MappingFragment StoreEntitySet="Device">
+          <ScalarProperty Name="deviceID" ColumnName="deviceID" />
+          <ScalarProperty Name="category" ColumnName="category" />
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="dataID" ColumnName="dataID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DeviceDatas">
+      <EntityTypeMapping TypeName="Model.DeviceData">
+        <MappingFragment StoreEntitySet="DeviceData">
+          <ScalarProperty Name="dataID" ColumnName="dataID" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="kwhour" ColumnName="kwhour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProviderAccounts">
+      <EntityTypeMapping TypeName="Model.ProviderAccount">
+        <MappingFragment StoreEntitySet="ProviderAccount">
+          <ScalarProperty Name="accountID" ColumnName="accountID" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="provider" ColumnName="provider" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="StoredDatas">
+      <EntityTypeMapping TypeName="Model.StoredData">
+        <MappingFragment StoreEntitySet="StoredData">
+          <ScalarProperty Name="deviceID" ColumnName="deviceID" />
+          <ScalarProperty Name="state" ColumnName="state" />
+          <ScalarProperty Name="datetime" ColumnName="datetime" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <!-- ADMIN THEME STYLES -->
+    <link href="~/Content/dashTheme/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/dashTheme/css/plugins/morris.css" rel="stylesheet" />
+    <link href="~/Content/dashTheme/css/sb-admin.css" rel="stylesheet" />
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
+    <link href="~/Content/customStyles/dashTheme.css" rel="stylesheet" />
+    @RenderSection("Styles", false)
+</head>
+<body>
+    <div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <a class="" href="@Url.Action("Index", "home")">
+            <img class="pull-left logo" src="~/images/logov1.png">
+        </a>
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Jarvis", "Index", "Home", new { area = "" }, new { @class = "navbar-brand page-scroll" })
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+                        </li>
+                        <li>
+                            <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">View All</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> @User.Identity.Name <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="@Url.Action("AccountView", "Accounts")"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="@Url.Action("Logout", "Accounts")"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens
+                    - will have to change which items are disaplyed vased on the role of the logged in user
+                -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="@Url.Action("ConsumerDashboard")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("AccountView")"><i class="fa fa-fw fa-user"></i> Account </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("DeviceManager")"><i class="fa fa-fw fa-plug"></i> Devices </a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("Insights")"><i class="fa fa-fw fa-lightbulb-o"></i> Insights</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                @RenderBody()
+            </div>
+        </div>
+        <footer class="col-sm-12 clearfix">
+            <div class="col-sm-7">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-4">
+                    <h4> Providers </h4>
+                    <ul>
+                        <li><a href="#"> NEST </a></li>
+                        <li><a href="#"> Phillips </a></li>
+                        <li><a href="#"> Amazon </a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4">
+                    <h4> Company </h4>
+                    <ul>
+                        <li> <a href="#"> Login </a></li>
+                        <li> <a href="#"> Register </a></li>
+                        <li> <a href="#"> About </a></li>
+                        <li><a href="#"> Support </a> </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-4 socail">
+                <div class="icons">
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                    <a href="#"> <i class="fa fa-twitter"></i> </a>
+                    <a href="#"> <i class="fa fa-linkedin"></i> </a>
+                </div>
+                <hr />
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            </div>
+        </footer>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script>
+            // small script to toggle the "darker" item
+            $(function () {
+                var navLines = $('.navbar-ex1-collapse li')
+                navLines.removeClass("active")
+                $.each(navLines, function () {
+                    if ($(this).find("a").attr("href") == window.location.pathname) {
+                        $(this).addClass("active")
+                    }
+                })
+            })
+        </script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Content/dashTheme/js/plugins/morris/raphael.min.js"></script>
+        <script src="~/Content/dashTheme/js/plugins/morris/morris.min.js"></script>
+        <script src="~/Content/dashTheme/js/plugins/morris/morris-data.js"></script>
+        @RenderSection("Scripts", false)
+
+    </div><!-- CLOSES WRAPPER -->
+
+</body>
+</html>

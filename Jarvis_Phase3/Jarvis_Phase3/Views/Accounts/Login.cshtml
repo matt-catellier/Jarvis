@@ -1,0 +1,40 @@
+﻿@model Jarvis_Phase3.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+}
+@section Styles {
+    <link href="~/Content/customStyles/login.css" rel="stylesheet" />
+}
+<div class="container clearfix">
+    
+    <div class="col-sm-6 opac-black">
+        @Html.Partial("Partials/LoginForm")
+        <table class="table table-condensed table-responsive col-sm-12">
+            <tr style="color: white;">
+                <th>Role</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+            <tr>
+                <td>admin</td>
+                <td>admin</td>
+                <td>password</td>
+            </tr>
+            <tr style="color: white;">
+                <td>consumer</td>
+                <td>consumer</td>
+                <td>password</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-sm-6">
+        <p> @*OTHER CONTENT*@ </p>
+    </div>
+</div>
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

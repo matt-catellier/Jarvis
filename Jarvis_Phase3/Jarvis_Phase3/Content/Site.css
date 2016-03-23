@@ -1,0 +1,178 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    margin-top: 70px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/*
+.body-content a {	text-decoration: none; color: green; }
+.body-content a:link { text-decoration: none; color: greenyellow; }
+.body-content a:visited { text-decoration: none; color: lightseagreen; }
+.body-content a:hover { text-decoration: none; color: red;}
+.body-content a:focus { text-decoration: none; color: purple; }
+.body-content a:active { text-decoration: none; color: royalblue; }
+    */
+    /*color: inherit;*/
+
+.body-content a:hover {
+    position: relative;
+    top: -4px;
+ }
+
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select {
+    max-width: 300px;
+}
+#messageTextArea{
+    width: 400px;
+    height: 200px;
+}
+
+/* CUSTOM STYLES */
+
+/* SITE WIDE */
+
+fieldset.fieldset-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+
+    /*border-radius: 7px;*/
+}
+
+legend.fieldset-border {
+    width:inherit; /* Or auto */
+    padding:0 10px; /* To give a bit of padding on the left and right */
+    border-bottom:none;
+    font-size: 25px;
+}
+
+/* NAV BAR */
+.logo {
+    margin: 10px 3%;
+    height: 60px;
+}
+.navbar > div a, .navbar .navbar-nav>li>a {
+    line-height: 40px;
+}
+
+footer a:hover{
+    color:aqua;
+    text-decoration:none;
+}
+
+/* HOME PAGE */
+
+.home-page  h1{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.home-page {
+    background: #FFF;
+}
+
+.home-background {
+    width: 100%;
+    z-index: 0;
+    opacity: 0.9;
+}
+
+.home-page .links {
+    text-align: left;
+}
+
+.home-page .links a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px;
+}
+
+.about-support-container {
+    clear: both;
+}
+
+
+.home-page .about-support-container .col-sm-6 {
+    padding: 0px;
+}
+
+.home-page .about-support-container .col-sm-6:first-of-type .home-writeup {
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+/* want to make it so background has some opacity eventually */
+.home-writeup {
+    margin-top: 10px;
+    position: relative;
+    left: 0%;
+    display: block;
+    z-index: 1;
+    padding: 10px;
+    background: #EEEEEE; 
+}
+
+.home-writeup p {
+    padding: 5px 10px;
+    margin-left: 10px;
+}
+
+.home-writeup::after {
+    position: absolute;
+    width:100%;
+    height: 100%;
+    background: #FFFFFF;
+    opacity: 0.8;
+}
+
+
+.home-writeup-menu {
+    margin-top: 70px;	
+    float:right;
+    z-index: 2;
+}
+
+.home-page .providers {
+    margin-bottom: 10px;
+}
+
+.home-page .providers > div {
+    margin-right: 10px;
+    height: 200px;
+}
+
+.home-page .providers .col-sm-4 {
+    width: 31%;
+}
+
+
+
+
+tr:nth-child(even) {background: #A9E2F3; color: black; }
+/* tr:nth-child(odd) {background: #FFFFFF} */
+
+/* === FORM STLYLES === */
+
+/* will add a transparent background to the div*/
+.opac-black {
+    background-color: black; color: white; opacity: 0.8;
+}
+
+.transparent-box {
+    float: left;
+
+
+}

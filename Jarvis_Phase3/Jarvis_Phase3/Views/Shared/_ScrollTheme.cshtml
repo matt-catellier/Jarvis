@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>   
+    
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
+    <link href="~/Content/scrollTheme/css/scrolling-nav.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    @RenderSection("Styles", false)
+
+</head>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <a class="" href="@Url.Action("Index", "home")">
+            <img class="pull-left logo" src="~/images/logov1.png">
+        </a>
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Jarvis", "Index", "Home", new { area = "" }, new { @class = "navbar-brand page-scroll" })
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    @{
+                        if (Request.IsAuthenticated && User.IsInRole("admin"))
+                        {
+                            <li><a class="page-scroll" href="@Url.Action("AdminDashBoard", "Accounts")">Dashboard</a></li>
+
+                        }
+                        else if (Request.IsAuthenticated && User.IsInRole("member"))
+                        {
+                            <li><a class="page-scroll" href="@Url.Action("ConsumerDashboard", "Accounts")">Dashboard</a></li>
+                        }
+                    }
+
+                    @{
+                        if (ViewBag.Title == "AboutSupport")
+                        {
+                            <li><a class="page-scroll" href="#about"> About </a></li>
+                            <li><a class="page-scroll" href="#faq"> FAQ </a></li>
+                            <li><a class="page-scroll" href="#contact"> Contact </a></li>
+                        }
+                        else
+                        {
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#about")"> About </a></li>
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#faq")"> FAQ </a></li>
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#contact")"> Contact </a></li>
+                        }
+                    }
+                   
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Documentation<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"> Last Update: March 23, 2016 </a></li>
+                            <li><a href="https://docs.google.com/document/d/1L5HJbsoXe5cHk6a0731RoZDsJb-6g3f_bKoEmClmU8U/edit" target="_blank">Project Documentation</a></li>
+                            <li><a href="http://ajkm.kpawa.com/" target="_blank"> Original Prototype </a></li>                          
+                            <li>@Html.ActionLink("API", "API", "Home", null, null)</li>
+                            
+                        </ul>
+                    </li>                 
+                    @{
+                        if (!Request.IsAuthenticated)
+                        {
+                            <li><a href="@Url.Action("Login", "Accounts")">Log in</a></li>
+                            <li><a href="@Url.Action("Register", "Accounts")">Register</a></li>
+                        }
+                        else if (Request.IsAuthenticated)
+                        {
+                            <li><a href="#">Hello, @Html.Raw(User.Identity.Name)</a></li>
+                            <li><a href="@Url.Action("Logout", "Accounts")">Log out</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="body-content">
+        @RenderBody()
+    </div>
+    <footer class="col-sm-12 clearfix">
+        <div class="col-sm-7">
+            <div class="col-sm-1">
+            </div>
+            <div class="col-sm-4">
+                <h4> Providers </h4>
+                <ul>
+                    <li><a href="#"> NEST </a></li>
+                    <li><a href="#"> Phillips </a></li>
+                    <li><a href="#"> Amazon </a></li>
+                </ul>   
+            </div>
+            <div class="col-sm-4">
+                <h4> Company </h4>
+                <ul>
+                    <li> <a href="#"> Login </a></li>
+                    <li> <a href="#"> Register </a></li>
+                    <li> <a href="#"> About </a></li>
+                    <li><a href="#"> Support </a> </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-sm-4 socail">
+            <div class="icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"> <i class="fa fa-twitter"></i> </a>
+                <a href="#"> <i class="fa fa-linkedin"></i> </a>
+            </div>
+                <hr />
+                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </div>
+    </footer>  
+    <script src="~/Content/scrollTheme/js/jquery.easing.min.js"></script>
+    <script src="~/Content/scrollTheme/js/scrolling-nav.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>
