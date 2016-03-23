@@ -140,3 +140,9 @@ G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
