@@ -348,9 +348,16 @@ namespace Jarvis_Phase3.Controllers
         {
             return View();
         }
-        public ActionResult DeviceManager()
+
+        public async Task<ActionResult> DeviceManager()
         {
-            return View();
+            ThermostatVMRepo repo = new ThermostatVMRepo();
+            var t = await repo.GetThermostat();
+
+            IEnumerable<ThermostatVM> thermostats = await repo.GetThermostats();
+
+            //ViewBag.thermostat = t;
+            return View(thermostats);
         }
         public ActionResult RegisterDevices()
         {

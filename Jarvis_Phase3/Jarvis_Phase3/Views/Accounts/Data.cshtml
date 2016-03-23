@@ -1,7 +1,74 @@
 ﻿
 @{
     ViewBag.Title = "Data";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
 
-<h2>Data</h2>
+<div class="container-fluid">
+    <div class="row">
+        <h2>Data</h2>
+        <div class="col-sm-8 clearfix page-content">
+            <div class="row col-sm-12">
+                <h1 class="col-sm-6" style="text-decoration: underline;">Your Devices </h1>
+            </div>
+            <div class="row col-sm-12">
+                <img src="~/images/electrical_consumption_chart.jpg" alt="Electrical Consumption Chart" style="width: 100%;" />
+            </div>
+            <div class="row col-sm-12">
+                <!-- COLUMN ONE -->
+                <div class="col-sm-4" style="background-color: white;">
+                    <h3>Event Monitor</h3>
+                    <p>7:45 AM Front Door Auto-lock engaged.</p>
+                    <p>7:04 AM Coffee Machine Auto-off.</p>
+                    <p>6:30 AM Kitchen Light Auto-on.</p>
+                    <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
+                    <p>... Monitor More Recent Events ...</p>
 
+                </div>
+
+                <!-- COLUMN TWO -->
+                <div class="col-sm-4" style="background-color:#e5f7ff;">
+                    <h3>Devices</h3>
+                    <p>Devices currently online: 75</p>
+                    <p>Lights: 24</p>
+                    <p>Coffee Machines: 1</p>
+                    <p>Refrigerators: 2</p>
+                    <p>Thermostats: 7</p>
+                    <p>Smoke Detectors: 6</p>
+                    <p>Security Cameras: 4</p>
+                    <p>Door Locks: </p>
+                    <p>... Click for more ...</p>
+                </div>
+
+                <!-- COLUMN THREE -->
+                <div class="col-sm-4">
+                    <h3>Scheduled Events</h3>
+                    <p>Coffee Machine: Daily 7 AM On.</p>
+                    <p>Lights: Daily 10 PM Off.</p>
+                    <p>Thermostats 4, 5 Daily Auto-on 26 degrees</p>
+                    <p>...<p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 side-bar">
+            <div class="row col-sm-12">
+                <div class="col-sm-12">
+
+                    <h2>Total Consumption</h2>
+                    <p>Electricity Consumption (2015): 480 KW/h</p>
+                    <p>Water Consumption (2015): 1660L</p>
+                    <p>Natural Gas Consumption (2015): 35 GJ</p>
+                </div>
+                <div class="col-sm-12">
+                    <h2>Integration with Suppliers</h2>
+                    <p>Grocery Deliveries</p>
+                    <p>Cleaning Supplies</p>
+                    <p>Add a new supplier</p>
+                </div>
+
+                <hr>
+
+            </div>
+        </div>
+    </div>
+</div>

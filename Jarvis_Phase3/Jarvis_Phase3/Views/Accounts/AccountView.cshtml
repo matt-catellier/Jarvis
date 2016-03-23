@@ -1,7 +1,7 @@
 ﻿
 @{
     ViewBag.Title = "AccountView";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
 }
 
 
@@ -53,13 +53,5 @@
                 </table>
             </div>
         </div>
-    </div>
-
-
-    <div style="padding-left:20px;" class="col-sm-4 side-bar">
-        @Html.ActionLink("Dashboard", "ConsumerDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("Account", "AccountView", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("Connected Devices", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
-        @Html.ActionLink("Insights", "Insights", null, new { @class = "btn btn-default btn-lg btn-block" })
     </div>
 </div>
