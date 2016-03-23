@@ -1,5 +1,13 @@
 # Jarvis
 
+TEST USERS
+
+username: consumer password: password role: consumer
+
+
+username: admin password: password  role: admin
+
+
 SCRUM REPORT
 <a href="https://docs.google.com/spreadsheets/d/13wK3IDOIXoELkOKrfKZqpV1CEgoW1tzqH1dYrdCpG3A/edit?invite=CKTu2IsH&ts=56aa5794"> SCRUM WORKBOOK </a>
 
