@@ -17,10 +17,6 @@ namespace Jarvis_Phase3.Controllers
     public class AccountsController : Controller
     {
         // leave blank
-        public async Task<ActionResult> Index()
-        {
-            return View();
-        }
         /* ================================== */
         /* ====== WEB SECURITY IDENTITY ===== */
         /* ================================== */
@@ -154,7 +150,7 @@ namespace Jarvis_Phase3.Controllers
             //        ViewBag.Response = response;
             //        return View("ConfirmEmail");
             //    }
-            return View();
+            //return View();
         }
 
         public ActionResult Logout()
@@ -351,13 +347,18 @@ namespace Jarvis_Phase3.Controllers
 
         public async Task<ActionResult> DeviceManager()
         {
-            ThermostatVMRepo repo = new ThermostatVMRepo();
-            var t = await repo.GetThermostat();
+            ThermostatVMRepo thermoRepo = new ThermostatVMRepo();
+            IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
 
-            IEnumerable<ThermostatVM> thermostats = await repo.GetThermostats();
+            CameraVMRepo camRepo = new CameraVMRepo();
+            IEnumerable<CameraVM> cams = await camRepo.GetCameras();
 
-            //ViewBag.thermostat = t;
-            return View(thermostats);
+            SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo();
+            IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
+
+            NestVM nestModel = new NestVM(cams, therms, alarms);
+
+            return View(nestModel);
         }
         public ActionResult RegisterDevices()
         {

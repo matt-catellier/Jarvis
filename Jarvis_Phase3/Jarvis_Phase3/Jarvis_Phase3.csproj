@@ -379,6 +379,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Devices\CameraVM.cs" />
     <Compile Include="Models\Devices\CameraVMRepo.cs" />
+    <Compile Include="Models\Devices\NestVM.cs" />
     <Compile Include="Models\Devices\SmokeAlarmVM.cs" />
     <Compile Include="Models\Devices\SmokeCoAlarmVMRepo.cs" />
     <Compile Include="Models\Devices\ThermostatVM.cs" />

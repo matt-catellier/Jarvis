@@ -1,32 +1,45 @@
-﻿@model IEnumerable<Jarvis_Phase3.Models.ThermostatVM>
+﻿@model Jarvis_Phase3.Models.NestVM
 @{
     ViewBag.Title = "DeviceManager";
     Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
 }
 
-<h2>DeviceManager</h2>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Devices <small>Data Overview</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-plug"></i> Devices
+            </li>
+        </ol>
+    </div>
+</div>
 <div class="container">
     <div class="col-sm-8 page-content">
-        <img style="width: 100%;" src="~/images/energy.PNG" />
         <div>
             <table class="table col-md-12">
+                <thead>
+                    @Html.Raw("Thermostats")
+                </thead>
                 <tr>
                     <th>
-                        @Html.DisplayNameFor(model => model.Current_Temperature)
+                        @Html.Raw("Current Temperature")
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Target_Temperature)
+                        @Html.Raw("Target Temperature")
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Name_Long)
+                        @Html.Raw("Device Name")
                     </th>
                     <th>
-                        @Html.DisplayNameFor(model => model.Device_Id)
+                        @Html.Raw("Device Id")
                     </th>
                     <th></th>
                 </tr>
 
-                @foreach (var item in Model)
+                @foreach (var item in Model.thermostatVMs)
                 {
                     <tr>
                         <td>
@@ -34,6 +47,90 @@
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Target_Temperature)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name_Long)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Device_Id)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+            <table class="table col-md-12">
+                <thead>
+                    @Html.Raw("Cameras")
+                </thead>
+                <tr>
+                    <th>
+                        @Html.Raw("Online Status")
+                    </th>
+                    <th>
+                        @Html.Raw("Streaming Status")
+                    </th>
+                    <th>
+                        @Html.Raw("Device Name")
+                    </th>
+                    <th>
+                        @Html.Raw("Device Id")
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model.cameraVMs)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Is_Online)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Is_Streaming)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name_Long)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Device_Id)
+                        </td>
+                    </tr>
+                }
+
+            </table>
+            <table class="table col-md-12">
+                <thead>
+                    @Html.Raw("Alarms")
+                </thead>
+                <tr>
+                    <th>
+                        @Html.Raw("Online Status")
+                    </th>
+                    <th>
+                        @Html.Raw("Smoke Alarm State")
+                    </th>
+                    <th>
+                        @Html.Raw("Co Alarm State")
+                    </th>
+                    <th>
+                        @Html.Raw("Device Name")
+                    </th>
+                    <th>
+                        @Html.Raw("Device Id")
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model.smokeCoAlarmVMs)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Is_Online)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Smoke_Alarm_State)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Co_Alarm_State)
                         </td>
                         <td>
                             @Html.DisplayFor(modelItem => item.Name_Long)
