@@ -56,12 +56,14 @@
                         if (ViewBag.Title == "AboutSupport")
                         {
                             <li><a class="page-scroll" href="#about"> About </a></li>
-                            <li><a class="page-scroll" href="#support"> Support </a></li>
+                            <li><a class="page-scroll" href="#faq"> FAQ </a></li>
+                            <li><a class="page-scroll" href="#contact"> Contact </a></li>
                         }
                         else
                         {
                             <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#about")"> About </a></li>
-                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#support")"> Support </a></li>
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#faq")"> Faq </a></li>
+                            <li><a class="page-scroll" href="@Html.Raw(@Url.Action("AboutSupport", "Home") + "#contact")"> Contact </a></li>
                         }
                     }
                    

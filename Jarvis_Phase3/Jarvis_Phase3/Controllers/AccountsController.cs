@@ -328,47 +328,87 @@ namespace Jarvis_Phase3.Controllers
         {
             return View();
         }
+
         public ActionResult ConsumerDashboard()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         public ActionResult AccountView()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         public ActionResult Data()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         public ActionResult Insights()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
 
         public async Task<ActionResult> DeviceManager()
         {
-            ThermostatVMRepo thermoRepo = new ThermostatVMRepo();
-            IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
+            if (User.Identity.IsAuthenticated)
+            {
+                ThermostatVMRepo thermoRepo = new ThermostatVMRepo();
+                IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
 
-            CameraVMRepo camRepo = new CameraVMRepo();
-            IEnumerable<CameraVM> cams = await camRepo.GetCameras();
+                CameraVMRepo camRepo = new CameraVMRepo();
+                IEnumerable<CameraVM> cams = await camRepo.GetCameras();
 
-            SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo();
-            IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
+                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo();
+                IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
 
-            NestVM nestModel = new NestVM(cams, therms, alarms);
+                NestVM nestModel = new NestVM(cams, therms, alarms);
 
-            return View(nestModel);
+                return View(nestModel);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+            
         }
         public ActionResult RegisterDevices()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         public ActionResult ViewAllConsumerAccounts()
-        {
-            return View();
-        }
-        public ActionResult SignUp()
         {
             return View();
         }
