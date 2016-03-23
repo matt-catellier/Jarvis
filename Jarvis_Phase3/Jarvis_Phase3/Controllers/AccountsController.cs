@@ -230,7 +230,14 @@ namespace Jarvis_Phase3.Controllers
         [HttpGet]
         public ActionResult AddRole()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
 
         [HttpPost]
@@ -245,7 +252,14 @@ namespace Jarvis_Phase3.Controllers
         [HttpGet]
         public ActionResult AddUserToRole()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         [HttpPost]
         public ActionResult AddUserToRole(string userName, string roleName)
@@ -326,7 +340,14 @@ namespace Jarvis_Phase3.Controllers
 
         public ActionResult AdminDashBoard()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
 
         public ActionResult ConsumerDashboard()
@@ -410,7 +431,14 @@ namespace Jarvis_Phase3.Controllers
         }
         public ActionResult ViewAllConsumerAccounts()
         {
-            return View();
+            if (User.Identity.IsAuthenticated)
+            {
+                return View();
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
     }
 }
