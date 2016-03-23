@@ -4,11 +4,20 @@
     Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
 }
 
-
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            Account <small> Profile</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-user"></i> Account
+            </li>
+        </ol>
+    </div>
+</div>
 <div class="container">
-    <p>@DateTime.Now.ToString("F")</p>
     <div class="col-sm-8 page-content">
-        <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
         <div>
             <div>
                 <table class="table table-condensed table-responsive">

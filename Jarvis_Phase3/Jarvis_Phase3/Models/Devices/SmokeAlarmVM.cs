@@ -1,10 +1,10 @@
 ﻿namespace Jarvis_Phase3.Models
 {
-    public enum Alarm_State { ok, warning, emergency }
+    public enum Alarm_State {  ok, warning, emergency }
     public class SmokeCoAlarmVM
     {
-        public Alarm_State Smoke_Alarm_State { get; set; }
-        public Alarm_State Co_Alarm_State { get; set; }
+        public Alarm_State? Smoke_Alarm_State { get; set; }
+        public Alarm_State? Co_Alarm_State { get; set; }
         public bool Is_Online { get; set; }
         public string Name_Long { get; set; }
         public string Device_Id { get; set; }

@@ -65,6 +65,10 @@ legend.fieldset-border {
     line-height: 40px;
 }
 
+footer a:hover{
+    color:aqua;
+    text-decoration:none;
+}
 
 /* HOME PAGE */
 
