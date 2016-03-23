@@ -146,3 +146,9 @@ G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
 G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config

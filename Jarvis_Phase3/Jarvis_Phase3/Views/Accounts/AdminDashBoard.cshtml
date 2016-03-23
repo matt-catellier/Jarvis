@@ -1,9 +1,8 @@
 ﻿
 @{
     ViewBag.Title = "AdminDashBoard";
-    Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
-
 
 
 <div class="row">
@@ -30,18 +29,6 @@
                 <li> Edit a Provider Account Info </li>
                 <li> Delete a Provider Account </li>
             </ul>
-        </div>
-    </div>
-
-    <div style="padding-left:20px; border-left: 1px solid #333;" class="col-sm-4 side-bar">
-        <div class="col-sm-12">
-
-            @Html.ActionLink("Admin Dashboard", "AdminDashboard", null, new { @class = "btn btn-default btn-lg btn-block" })
-            @Html.ActionLink("Register Providers", "RegisterDevices", null, new { @class = "btn btn-default btn-lg btn-block" })
-            @Html.ActionLink("Data View", "Data", null, new { @class = "btn btn-default btn-lg btn-block" })
-            @Html.ActionLink("Account View", "ViewAllConsumerAccounts", null, new { @class = "btn btn-default btn-lg btn-block" })
-            @Html.ActionLink("AddRole", "AddRole", null, new { @class = "btn btn-default btn-lg btn-block" })
-            @Html.ActionLink("AddUserToRole", "AddUserToRole", null, new { @class = "btn btn-default btn-lg btn-block" })
         </div>
     </div>
 </div>

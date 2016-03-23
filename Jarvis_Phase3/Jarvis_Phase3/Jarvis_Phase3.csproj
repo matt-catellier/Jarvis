@@ -424,6 +424,8 @@
     <Content Include="Views\Accounts\AddUserToRole.cshtml" />
     <Content Include="Views\Accounts\AdminDashBoard.cshtml" />
     <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
+    <Content Include="Views\Shared\_ConsumerDashboardTheme.cshtml" />
+    <Content Include="Views\Shared\_AdminDashboardTheme.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
