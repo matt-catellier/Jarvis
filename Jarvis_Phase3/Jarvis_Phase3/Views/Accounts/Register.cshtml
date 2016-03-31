@@ -1,5 +1,4 @@
 ﻿@model Jarvis_Phase3.Models.RegisteredUser
-
 @{
     ViewBag.Title = "Register";
     Layout = "~/Views/Shared/_ScrollTheme.cshtml";
@@ -20,14 +19,11 @@
         @Html.Partial("Partials/RegisterForm")
     </div>
 
-
     <div class="col-md-6">
         <div class="panel opac-black">
             <div class="panel-heading opac-black">
                 <strong class="">Cut-and-Paste Data</strong>
-
             </div>
-
             <div class="panel-body opac-black">
                 <table class="table table-condensed table-responsive col-sm-12 opac-black">
                     <tr>
@@ -50,7 +46,6 @@
                             </p>
                         </td>
                     </tr>
-
                     <tr>
                         <th>Role</th>
                         <th>Username</th>
@@ -69,6 +64,18 @@
                 </table>
             </div>
         </div>
+    </div>
+    <div>
+        @{
+            if (ViewBag.Error != null)
+            {
+                <div style="text-align:center">
+                    <span class="alert alert-danger">
+                        <span class="glyphicon glyphicon-remove-circle"> </span> @Html.Raw(ViewBag.Error)
+                    </span>
+                </div>
+            }
+        }
     </div>
 </div>
 <script src="~/Scripts/jquery-1.10.2.min.js"></script>

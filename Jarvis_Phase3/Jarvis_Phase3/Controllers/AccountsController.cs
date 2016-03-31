@@ -105,12 +105,31 @@ namespace Jarvis_Phase3.Controllers
             };
 
             IdentityResult result = manager.Create(identityUser, newUser.Password);
+
             if (result.Succeeded)
             {
-                return View();
+                CreateTokenProvider(manager, EMAIL_CONFIRMATION);
+
+                var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
+                var callbackUrl = Url.Action("ConfirmEmail", "Accounts",
+                                                new { userId = identityUser.Id, code = code },
+                                                    protocol: Request.Url.Scheme);
+
+                string email = "Please confirm your account by clicking this link: <a href=\""
+                                + callbackUrl + "\">Confirm Registration</a>";
+                ViewBag.FakeConfirmation = email;
+
+                MailHelper mailer = new MailHelper();
+                string response = mailer.EmailFromArvixe(
+                                           new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
+                ViewBag.Response = response;
+
+
+                return View("EmailSent");
             }
             else
             {
+                ViewBag.Error = "Could not register new user.";
                 return View();
             }
 
@@ -200,11 +219,25 @@ namespace Jarvis_Phase3.Controllers
             }
             return true;
         }
-        public ActionResult ConfirmEmail()
+        public ActionResult ConfirmEmail(string userID, string code)
         {
-
+            var userStore = new UserStore<IdentityUser>();
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+            var user = manager.FindById(userID);
+            CreateTokenProvider(manager, EMAIL_CONFIRMATION);
+            try
+            {
+                IdentityResult result = manager.ConfirmEmail(userID, code);
+                if (result.Succeeded)
+                    ViewBag.Message = "You are now registered!";
+            }
+            catch
+            {
+                ViewBag.Message = "Validation attempt failed!";
+            }
             return View();
         }
+
         public ActionResult VerifiedEmail(string userID, string code)
         {
             var userStore = new UserStore<IdentityUser>();

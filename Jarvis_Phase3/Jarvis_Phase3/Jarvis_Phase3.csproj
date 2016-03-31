@@ -426,6 +426,8 @@
     <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
     <Content Include="Views\Shared\_ConsumerDashboardTheme.cshtml" />
     <Content Include="Views\Shared\_AdminDashboardTheme.cshtml" />
+    <Content Include="Views\Accounts\EmailSent.cshtml" />
+    <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewBag.Title = "ConfirmEmail";
+    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+}
+@section Styles {
+    <style>
+        .body-content {
+            background-image: url('../../images/man-coffee-cup-pen.jpg');
+            color: silver;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            min-height: 90%;
+            height: auto !important;
+            height: 90%;
+        }
+
+        #footer {
+            position:fixed;
+            bottom:0;
+        }
+    </style>
+}
+<div class="panel opac-black">
+    <div class="panel-body opac-black" style="text-align:center">
+        @{
+            if (ViewBag.Message == "You are now registered!")
+            {
+                <span class="glyphicon glyphicon-ok-circle"> </span>
+            }
+            else
+            {
+                <span class="glyphicon glyphicon-remove-circle"> </span>
+            }
+        }
+         @Html.Raw(ViewBag.Message)
+    </div>
+</div>
