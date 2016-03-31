@@ -21,18 +21,20 @@
         }
     </style>
 }
-<div class="panel opac-black">
-    <div class="panel-body opac-black" style="text-align:center">
-        @{
-            if (ViewBag.Message == "You are now registered!")
-            {
-                <span class="glyphicon glyphicon-ok-circle"> </span>
+<div class="message">
+    <div class="panel opac-black">
+        <div class="panel-body opac-black" style="text-align:center">
+            @{
+                if (ViewBag.Message == "You are now registered!")
+                {
+                    <span class="glyphicon glyphicon-ok-circle"> </span>
+                }
+                else
+                {
+                    <span class="glyphicon glyphicon-remove-circle"> </span>
+                }
             }
-            else
-            {
-                <span class="glyphicon glyphicon-remove-circle"> </span>
-            }
-        }
-         @Html.Raw(ViewBag.Message)
+            @Html.Raw(ViewBag.Message)
+        </div>
     </div>
 </div>

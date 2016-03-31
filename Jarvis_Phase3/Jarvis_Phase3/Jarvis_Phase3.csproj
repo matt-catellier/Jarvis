@@ -428,6 +428,10 @@
     <Content Include="Views\Shared\_AdminDashboardTheme.cshtml" />
     <Content Include="Views\Accounts\EmailSent.cshtml" />
     <Content Include="Views\Accounts\ConfirmEmail.cshtml" />
+    <Content Include="Views\Accounts\ForgotPassword.cshtml" />
+    <Content Include="Views\Accounts\PasswordEmail.cshtml" />
+    <Content Include="Views\Accounts\ResetPassword.cshtml" />
+    <Content Include="Views\Accounts\ResultPassword.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

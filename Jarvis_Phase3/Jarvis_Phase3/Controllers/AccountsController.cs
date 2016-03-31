@@ -335,10 +335,6 @@ namespace Jarvis_Phase3.Controllers
                                        new RegisteredUser(userRecovery.Email = email, userRecovery.Subject = "Password Recovery Email", userRecovery.Body = body));
             return View("PasswordEmail");
         }
-        public ActionResult PasswordEmail()
-        {
-            return View();
-        }
         [HttpGet]
         public ActionResult ResetPassword(string userID, string code)
         {
@@ -361,7 +357,7 @@ namespace Jarvis_Phase3.Controllers
                 ViewBag.Result = "The password has been successfully reset.";
             else
                 ViewBag.Result = "The password has not been reset.";
-            return View("SuccessPassword");
+            return View("ResultPassword");
         }
         public ActionResult SuccessPassword()
         {
