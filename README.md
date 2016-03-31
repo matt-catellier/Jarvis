@@ -32,3 +32,7 @@ NEST ACCOUNT INFO
 User: mattcatellier@gmail.com
 Pass: Nest1234!
 
+
+Jalen Nest Info:
+Product ID: db312572-8fab-4b69-9174-9fe4e6e40b40
+Product Secret: asNkcciQ0Kbo8YtAUd9SkNdUq
