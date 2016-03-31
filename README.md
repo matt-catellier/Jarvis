@@ -28,3 +28,7 @@ user: jarvis
 
 NOTE: we all know the passwords for these (hint: numbers... simple...)
 
+NEST ACCOUNT INFO
+User: mattcatellier@gmail.com
+Pass: Nest1234!
+
