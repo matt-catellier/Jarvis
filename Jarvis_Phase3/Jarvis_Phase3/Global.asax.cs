@@ -19,16 +19,14 @@ namespace Jarvis_Phase3
             AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
 
             // for JSON
-            //GlobalConfiguration.Configure(WebApiConfig.Register);
-            //GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings
-            //.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+            GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings
+            .ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
 
             // default
             AreaRegistration.RegisterAllAreas();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
             RouteConfig.RegisterRoutes(RouteTable.Routes);      
-            
-                  
+                        
         }
     }
 }

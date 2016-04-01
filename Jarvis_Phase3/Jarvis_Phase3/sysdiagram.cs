@@ -12,16 +12,12 @@ namespace Jarvis_Phase3
     using System;
     using System.Collections.Generic;
     
-    public partial class Device
+    public partial class sysdiagram
     {
-        public int deviceID { get; set; }
-        public string category { get; set; }
-        public string provider { get; set; }
-        public string accountID { get; set; }
-    
-        public virtual Account Account { get; set; }
-        public virtual Camera Camera { get; set; }
-        public virtual SmokeAlarm SmokeAlarm { get; set; }
-        public virtual Thermostat Thermostat { get; set; }
+        public string name { get; set; }
+        public int principal_id { get; set; }
+        public int diagram_id { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

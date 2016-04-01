@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\Jarvis3DB.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\Jarvis3DB.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

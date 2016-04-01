@@ -14,10 +14,11 @@ namespace Jarvis_Phase3
     
     public partial class ProviderAccount
     {
-        public int accountID { get; set; }
+        public string accountID { get; set; }
         public string username { get; set; }
         public string password { get; set; }
         public string provider { get; set; }
+        public string accessToken { get; set; }
     
         public virtual Account Account { get; set; }
     }

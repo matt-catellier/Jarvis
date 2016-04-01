@@ -10,18 +10,13 @@
 namespace Jarvis_Phase3
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Device
+    public partial class sp_helpdiagrams_Result
     {
-        public int deviceID { get; set; }
-        public string category { get; set; }
-        public string provider { get; set; }
-        public string accountID { get; set; }
-    
-        public virtual Account Account { get; set; }
-        public virtual Camera Camera { get; set; }
-        public virtual SmokeAlarm SmokeAlarm { get; set; }
-        public virtual Thermostat Thermostat { get; set; }
+        public string Database { get; set; }
+        public string Name { get; set; }
+        public int ID { get; set; }
+        public string Owner { get; set; }
+        public int OwnerID { get; set; }
     }
 }

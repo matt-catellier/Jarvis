@@ -12,11 +12,13 @@ namespace Jarvis_Phase3
     using System;
     using System.Collections.Generic;
     
-    public partial class StoredData
+    public partial class Thermostat
     {
         public int deviceID { get; set; }
-        public string state { get; set; }
-        public Nullable<System.DateTime> datetime { get; set; }
+        public string name { get; set; }
+        public Nullable<float> currentTemp { get; set; }
+        public Nullable<float> targetTemp { get; set; }
+        public Nullable<int> online { get; set; }
     
         public virtual Device Device { get; set; }
     }

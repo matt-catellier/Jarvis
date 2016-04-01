@@ -12,19 +12,14 @@ namespace Jarvis_Phase3
     using System;
     using System.Collections.Generic;
     
-    public partial class DeviceData
+    public partial class SmokeAlarm
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DeviceData()
-        {
-            this.Devices = new HashSet<Device>();
-        }
-    
-        public int dataID { get; set; }
+        public int deviceID { get; set; }
+        public string name { get; set; }
         public string state { get; set; }
-        public float kwhour { get; set; }
+        public string co_alarmState { get; set; }
+        public Nullable<int> online { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Device> Devices { get; set; }
+        public virtual Device Device { get; set; }
     }
 }

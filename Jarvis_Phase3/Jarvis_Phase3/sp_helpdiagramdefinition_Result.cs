@@ -10,17 +10,10 @@
 namespace Jarvis_Phase3
 {
     using System;
-    using System.Collections.Generic;
     
-    public partial class Detail
+    public partial class sp_helpdiagramdefinition_Result
     {
-        public int accountID { get; set; }
-        public Nullable<int> familysize { get; set; }
-        public Nullable<int> children { get; set; }
-        public Nullable<int> adults { get; set; }
-        public Nullable<int> rooms { get; set; }
-        public string address { get; set; }
-    
-        public virtual Account Account { get; set; }
+        public Nullable<int> version { get; set; }
+        public byte[] definition { get; set; }
     }
 }

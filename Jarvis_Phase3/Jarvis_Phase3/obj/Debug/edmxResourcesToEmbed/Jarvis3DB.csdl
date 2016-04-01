@@ -57,74 +57,86 @@
     <Property Name="UserName" Type="String" MaxLength="256" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="AspNetUserClaims" Relationship="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserClaims" />
     <NavigationProperty Name="AspNetUserLogins" Relationship="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUsers" ToRole="AspNetUserLogins" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Account__account__4B422AD5" FromRole="AspNetUsers" ToRole="Account" />
     <NavigationProperty Name="AspNetRoles" Relationship="Self.AspNetUserRoles" FromRole="AspNetUsers" ToRole="AspNetRoles" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <EntityType Name="Account">
     <Key>
       <PropertyRef Name="accountID" />
     </Key>
-    <Property Name="accountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="firstname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="lastname" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="birthdate" Type="DateTime" Nullable="false" Precision="0" />
-    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Detail" Relationship="Self.FK__Details__account__1367E606" FromRole="Account" ToRole="Details" />
-    <NavigationProperty Name="Devices" Relationship="Self.FK__Device__accountI__1B0907CE" FromRole="Account" ToRole="Device" />
-    <NavigationProperty Name="ProviderAccount" Relationship="Self.FK__ProviderA__accou__164452B1" FromRole="Account" ToRole="ProviderAccount" />
+    <Property Name="accountID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lastName" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="type" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AspNetUser" Relationship="Self.FK__Account__account__4B422AD5" FromRole="Account" ToRole="AspNetUsers" />
+    <NavigationProperty Name="Devices" Relationship="Self.FK__Device__accountI__50FB042B" FromRole="Account" ToRole="Device" />
+    <NavigationProperty Name="ProviderAccount" Relationship="Self.FK__ProviderA__accou__4E1E9780" FromRole="Account" ToRole="ProviderAccount" />
   </EntityType>
-  <EntityType Name="Detail">
+  <EntityType Name="Camera">
     <Key>
-      <PropertyRef Name="accountID" />
+      <PropertyRef Name="deviceID" />
     </Key>
-    <Property Name="accountID" Type="Int32" Nullable="false" />
-    <Property Name="familysize" Type="Int32" />
-    <Property Name="children" Type="Int32" />
-    <Property Name="adults" Type="Int32" />
-    <Property Name="rooms" Type="Int32" />
-    <Property Name="address" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="Account" Relationship="Self.FK__Details__account__1367E606" FromRole="Details" ToRole="Account" />
+    <Property Name="deviceID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="streaming" Type="Int32" />
+    <Property Name="online" Type="Int32" />
+    <NavigationProperty Name="Device" Relationship="Self.FK__Camera__deviceID__56B3DD81" FromRole="Camera" ToRole="Device" />
   </EntityType>
   <EntityType Name="Device">
     <Key>
       <PropertyRef Name="deviceID" />
     </Key>
-    <Property Name="deviceID" Type="Int32" Nullable="false" />
+    <Property Name="deviceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="category" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-    <Property Name="accountID" Type="Int32" Nullable="false" />
-    <Property Name="dataID" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Account" Relationship="Self.FK__Device__accountI__1B0907CE" FromRole="Device" ToRole="Account" />
-    <NavigationProperty Name="DeviceData" Relationship="Self.FK__Device__dataID__1BFD2C07" FromRole="Device" ToRole="DeviceData" />
-    <NavigationProperty Name="StoredData" Relationship="Self.FK__StoredDat__devic__1FCDBCEB" FromRole="Device" ToRole="StoredData" />
-  </EntityType>
-  <EntityType Name="DeviceData">
-    <Key>
-      <PropertyRef Name="dataID" />
-    </Key>
-    <Property Name="dataID" Type="Int32" Nullable="false" />
-    <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="kwhour" Type="Single" Nullable="false" />
-    <NavigationProperty Name="Devices" Relationship="Self.FK__Device__dataID__1BFD2C07" FromRole="DeviceData" ToRole="Device" />
+    <Property Name="provider" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="accountID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__Device__accountI__50FB042B" FromRole="Device" ToRole="Account" />
+    <NavigationProperty Name="Camera" Relationship="Self.FK__Camera__deviceID__56B3DD81" FromRole="Device" ToRole="Camera" />
+    <NavigationProperty Name="SmokeAlarm" Relationship="Self.FK__SmokeAlar__devic__53D770D6" FromRole="Device" ToRole="SmokeAlarm" />
+    <NavigationProperty Name="Thermostat" Relationship="Self.FK__Thermosta__devic__59904A2C" FromRole="Device" ToRole="Thermostat" />
   </EntityType>
   <EntityType Name="ProviderAccount">
     <Key>
       <PropertyRef Name="accountID" />
     </Key>
-    <Property Name="accountID" Type="Int32" Nullable="false" />
+    <Property Name="accountID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="username" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="provider" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <NavigationProperty Name="Account" Relationship="Self.FK__ProviderA__accou__164452B1" FromRole="ProviderAccount" ToRole="Account" />
+    <Property Name="accessToken" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Account" Relationship="Self.FK__ProviderA__accou__4E1E9780" FromRole="ProviderAccount" ToRole="Account" />
   </EntityType>
-  <EntityType Name="StoredData">
+  <EntityType Name="SmokeAlarm">
     <Key>
       <PropertyRef Name="deviceID" />
     </Key>
     <Property Name="deviceID" Type="Int32" Nullable="false" />
-    <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="datetime" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Device" Relationship="Self.FK__StoredDat__devic__1FCDBCEB" FromRole="StoredData" ToRole="Device" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="state" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="co_alarmState" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="online" Type="Int32" />
+    <NavigationProperty Name="Device" Relationship="Self.FK__SmokeAlar__devic__53D770D6" FromRole="SmokeAlarm" ToRole="Device" />
+  </EntityType>
+  <EntityType Name="Thermostat">
+    <Key>
+      <PropertyRef Name="deviceID" />
+    </Key>
+    <Property Name="deviceID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="currentTemp" Type="Single" />
+    <Property Name="targetTemp" Type="Single" />
+    <Property Name="online" Type="Int32" />
+    <NavigationProperty Name="Device" Relationship="Self.FK__Thermosta__devic__59904A2C" FromRole="Thermostat" ToRole="Device" />
   </EntityType>
   <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
     <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1">
@@ -154,20 +166,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Details__account__1367E606">
-    <End Role="Account" Type="Self.Account" Multiplicity="1" />
-    <End Role="Details" Type="Self.Detail" Multiplicity="0..1" />
+  <Association Name="FK__Account__account__4B422AD5">
+    <End Role="AspNetUsers" Type="Self.AspNetUser" Multiplicity="1" />
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
     <ReferentialConstraint>
-      <Principal Role="Account">
-        <PropertyRef Name="accountID" />
+      <Principal Role="AspNetUsers">
+        <PropertyRef Name="Id" />
       </Principal>
-      <Dependent Role="Details">
+      <Dependent Role="Account">
         <PropertyRef Name="accountID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Device__accountI__1B0907CE">
-    <End Role="Account" Type="Self.Account" Multiplicity="1" />
+  <Association Name="FK__Device__accountI__50FB042B">
+    <End Role="Account" Type="Self.Account" Multiplicity="0..1" />
     <End Role="Device" Type="Self.Device" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Account">
@@ -178,7 +190,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__ProviderA__accou__164452B1">
+  <Association Name="FK__ProviderA__accou__4E1E9780">
     <End Role="Account" Type="Self.Account" Multiplicity="1" />
     <End Role="ProviderAccount" Type="Self.ProviderAccount" Multiplicity="0..1" />
     <ReferentialConstraint>
@@ -190,26 +202,38 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Device__dataID__1BFD2C07">
-    <End Role="DeviceData" Type="Self.DeviceData" Multiplicity="1" />
-    <End Role="Device" Type="Self.Device" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="DeviceData">
-        <PropertyRef Name="dataID" />
-      </Principal>
-      <Dependent Role="Device">
-        <PropertyRef Name="dataID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__StoredDat__devic__1FCDBCEB">
+  <Association Name="FK__Camera__deviceID__56B3DD81">
     <End Role="Device" Type="Self.Device" Multiplicity="1" />
-    <End Role="StoredData" Type="Self.StoredData" Multiplicity="0..1" />
+    <End Role="Camera" Type="Self.Camera" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Device">
         <PropertyRef Name="deviceID" />
       </Principal>
-      <Dependent Role="StoredData">
+      <Dependent Role="Camera">
+        <PropertyRef Name="deviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SmokeAlar__devic__53D770D6">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="SmokeAlarm" Type="Self.SmokeAlarm" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="deviceID" />
+      </Principal>
+      <Dependent Role="SmokeAlarm">
+        <PropertyRef Name="deviceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Thermosta__devic__59904A2C">
+    <End Role="Device" Type="Self.Device" Multiplicity="1" />
+    <End Role="Thermostat" Type="Self.Thermostat" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Device">
+        <PropertyRef Name="deviceID" />
+      </Principal>
+      <Dependent Role="Thermostat">
         <PropertyRef Name="deviceID" />
       </Dependent>
     </ReferentialConstraint>
@@ -224,12 +248,13 @@
     <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaim" />
     <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogin" />
     <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUser" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <EntitySet Name="Accounts" EntityType="Self.Account" />
-    <EntitySet Name="Details" EntityType="Self.Detail" />
+    <EntitySet Name="Cameras" EntityType="Self.Camera" />
     <EntitySet Name="Devices" EntityType="Self.Device" />
-    <EntitySet Name="DeviceDatas" EntityType="Self.DeviceData" />
     <EntitySet Name="ProviderAccounts" EntityType="Self.ProviderAccount" />
-    <EntitySet Name="StoredDatas" EntityType="Self.StoredData" />
+    <EntitySet Name="SmokeAlarms" EntityType="Self.SmokeAlarm" />
+    <EntitySet Name="Thermostats" EntityType="Self.Thermostat" />
     <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
@@ -238,29 +263,74 @@
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
     </AssociationSet>
-    <AssociationSet Name="FK__Details__account__1367E606" Association="Self.FK__Details__account__1367E606">
+    <AssociationSet Name="FK__Account__account__4B422AD5" Association="Self.FK__Account__account__4B422AD5">
+      <End Role="AspNetUsers" EntitySet="AspNetUsers" />
       <End Role="Account" EntitySet="Accounts" />
-      <End Role="Details" EntitySet="Details" />
     </AssociationSet>
-    <AssociationSet Name="FK__Device__accountI__1B0907CE" Association="Self.FK__Device__accountI__1B0907CE">
+    <AssociationSet Name="FK__Device__accountI__50FB042B" Association="Self.FK__Device__accountI__50FB042B">
       <End Role="Account" EntitySet="Accounts" />
       <End Role="Device" EntitySet="Devices" />
     </AssociationSet>
-    <AssociationSet Name="FK__ProviderA__accou__164452B1" Association="Self.FK__ProviderA__accou__164452B1">
+    <AssociationSet Name="FK__ProviderA__accou__4E1E9780" Association="Self.FK__ProviderA__accou__4E1E9780">
       <End Role="Account" EntitySet="Accounts" />
       <End Role="ProviderAccount" EntitySet="ProviderAccounts" />
     </AssociationSet>
-    <AssociationSet Name="FK__Device__dataID__1BFD2C07" Association="Self.FK__Device__dataID__1BFD2C07">
-      <End Role="DeviceData" EntitySet="DeviceDatas" />
+    <AssociationSet Name="FK__Camera__deviceID__56B3DD81" Association="Self.FK__Camera__deviceID__56B3DD81">
       <End Role="Device" EntitySet="Devices" />
+      <End Role="Camera" EntitySet="Cameras" />
     </AssociationSet>
-    <AssociationSet Name="FK__StoredDat__devic__1FCDBCEB" Association="Self.FK__StoredDat__devic__1FCDBCEB">
+    <AssociationSet Name="FK__SmokeAlar__devic__53D770D6" Association="Self.FK__SmokeAlar__devic__53D770D6">
       <End Role="Device" EntitySet="Devices" />
-      <End Role="StoredData" EntitySet="StoredDatas" />
+      <End Role="SmokeAlarm" EntitySet="SmokeAlarms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Thermosta__devic__59904A2C" Association="Self.FK__Thermosta__devic__59904A2C">
+      <End Role="Device" EntitySet="Devices" />
+      <End Role="Thermostat" EntitySet="Thermostats" />
     </AssociationSet>
     <AssociationSet Name="AspNetUserRoles" Association="Self.AspNetUserRoles">
       <End Role="AspNetRoles" EntitySet="AspNetRoles" />
       <End Role="AspNetUsers" EntitySet="AspNetUsers" />
     </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
   </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
 </Schema>
