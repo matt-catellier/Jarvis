@@ -1,0 +1,110 @@
+﻿@model Jarvis_Phase3.Models.NestVM
+
+@{
+    ViewBag.Title = "DeviceManager";
+}
+
+<style>
+    body {
+        width: 80%;
+        margin: 0 10px 0 10px;
+    }
+
+    #graph {
+        width: auto;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
+
+    pre {
+        height: 250px;
+        overflow: auto;
+    }
+</style>
+<ol class="breadcrumb">
+    <li class="active">
+        <i class="fa fa-plug"></i> Devices
+    </li>
+</ol>
+<div id="line_graph"></div>
+<table>
+    <thead>
+        @Html.Raw("SmokeAlarm")
+    </thead>
+    <tr>
+        <th>
+            @Html.Raw("Current Temperature")
+        </th>
+        <th>
+            @Html.Raw("Target Temperature")
+        </th>
+        <th>
+            @Html.Raw("Device Name")
+        </th>
+        <th>
+            @Html.Raw("Device Id")
+        </th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model.smokeCoAlarmVMs)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Is_Online)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name_Long)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Smoke_Alarm_State)
+            </td>
+        </tr>
+    }
+</table>
+
+
+
+
+
+<script>
+    donut_graph();
+    prettyPrint();
+
+    function donut_graph() {
+
+        Morris.Donut({
+            element: 'graph',
+            data: [
+              {value: 70, label: 'foo', formatted: 'at least 70%' },
+              {value: 15, label: 'bar', formatted: 'approx. 15%' },
+              {value: 10, label: 'baz', formatted: 'approx. 10%' },
+              {value: 5, label: 'A really really long label', formatted: 'at most 5%' }
+            ],
+            formatter: function (x, data) { return data.formatted; }
+        });
+
+    }
+
+
+
+        @*var day_data = [
+            @foreach (var item in Model.thermostatVMs)
+            {
+                Html.Raw(item);
+                @Html.Raw("{ 'period':" + " '2012-10-01'," + " 'licensed': " +  @Html.DisplayFor(modelItem => item.Current_Temperature) + ", sorned: " + @Html.DisplayFor(modelItem => item.Current_Temperature) + "},");
+
+            }
+
+        ]*@
+
+
+        Morris.Line({
+            element: 'donut_graph',
+            data: day_data,
+            xkey: 'period',
+            ykeys: ['licensed', 'sorned'],
+            labels: ['Licensed', 'SORN']
+        });
+    }
+
+</script>

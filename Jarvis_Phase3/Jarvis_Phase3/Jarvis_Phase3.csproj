@@ -319,7 +319,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Shared\Partials\example.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\AboutSupport.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -462,6 +461,8 @@
     <Content Include="Views\Shared\Partials\ThermostatChart.cshtml" />
     <Content Include="Views\Accounts\EditAccount.cshtml" />
     <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
+    <Content Include="Views\Shared\Partials\smokeCoAlarmChart.cshtml" />
+    <Content Include="Views\Shared\Partials\CameraTable.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
