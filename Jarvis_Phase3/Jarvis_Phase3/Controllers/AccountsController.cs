@@ -479,13 +479,19 @@ namespace Jarvis_Phase3.Controllers
         [HttpGet]
         public ActionResult EditAccount()
         {
-            var userStore = new UserStore<IdentityUser>();
-            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
-            var user = manager.FindByName(User.Identity.Name);
-            string myID = user.Id;
-            EditableUserRepo editRepo = new EditableUserRepo();
-            EditableUser editUser = editRepo.getUser(myID);
-            return View(editUser);
+            if (User.Identity.IsAuthenticated)
+            {
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(myID);
+                return View(editUser);
+            }else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
         }
         [HttpPost]
         public ActionResult EditAccount(EditableUser editedUser)
