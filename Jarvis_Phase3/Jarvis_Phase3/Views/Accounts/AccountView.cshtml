@@ -1,4 +1,5 @@
-﻿
+﻿@model Jarvis_Phase3.Models.EditableUser
+
 @{
     ViewBag.Title = "AccountView";
     Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
@@ -23,39 +24,12 @@
                 <table class="table table-condensed table-responsive">
                     <tr>
                         <td>
-                            <h3>Profile <a href="#"> Edit </a></h3>
+                            <h3>Profile @Html.ActionLink("Edit", "EditAccount")</h3>
                             <ul>
-                                <li>User Name: janedoe</li>
-                                <li>First Name: Jane </li>
-                                <li>Last Name: Doe </li>
-                                <li>Email: janedoe@gmail.com</li>
-                            </ul>
-                        </td>
-                        <td>
-                            <h3>Account Details <a href="#"> Edit </a></h3>
-                            <ul>
-                                <li>Account Type: Basic</li>
-                                <li>Payment Method: Visa</li>
-                                <li>Payment Period: Yearly</li>
-                                <li>Your membership will be automatically renewed on 2/15/16</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h3>Preferences <a href="#"> Edit </a></h3>
-                            <ul>
-                                <li>Set-up Email Notifications: On <a href="#"> Define Events </a></li>
-                                <li>Set-up SMS Notifications:  On <a href="#"> Define Events </a></li>
-                            </ul>
-                        </td>
-                        <td>
-                            <h3>Membership Options <a href="#"> Edit </a></h3>
-                            <ul>
-                                <li>Available Server Capacity: 2 GB/ 4 GB</li>
-                                <li><a href="#"> Upgrade Membership Plan </a></li>
-                                <li><a href="#"> Pause membership </a></li>
-                                <li><a href="#"> Cancel membership </a></li>
+                                <li>User Name: @Model.UserName</li>
+                                <li>First Name: @Model.FirstName </li>
+                                <li>Last Name: @Model.LastName </li>
+                                <li>Email: @Model.Email</li>
                             </ul>
                         </td>
                     </tr>
