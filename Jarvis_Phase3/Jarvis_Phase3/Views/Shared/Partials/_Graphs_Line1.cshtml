@@ -1,0 +1,63 @@
+﻿<head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="~/Content/Graphs/morris.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="~/Content/Graphs/morris.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+</head>
+
+<style>
+    body {
+        width: 80%;
+        margin: 0 10px 0 10px;
+    }
+
+    #graph {
+        width: auto;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
+
+    pre {
+        height: 250px;
+        overflow: auto;
+    }
+</style>
+
+<div id="line_graph"></div>
+
+<script>
+    line_graph();
+            prettyPrint();
+
+            function line_graph() {
+
+                var day_data = [
+                  { "period": "2012-10-01", "licensed": 1407, "sorned": 160 },
+                  { "period": "2012-09-30", "licensed": 3351, "sorned": 629 },
+                  { "period": "2012-09-29", "licensed": 3269, "sorned": 618 },
+                  { "period": "2012-09-20", "licensed": 2246, "sorned": 261 },
+                  { "period": "2012-09-19", "licensed": 3257, "sorned": 667 },
+                  { "period": "2012-09-18", "licensed": 3248, "sorned": 627 },
+                  { "period": "2012-09-17", "licensed": 371, "sorned": 60 },
+                  { "period": "2012-09-16", "licensed": 3171, "sorned": 676 },
+                  { "period": "2012-09-15", "licensed": 5201, "sorned": 956 },
+                  { "period": "2012-09-10", "licensed": 3215, "sorned": 622 }
+                ];
+                Morris.Line({
+                    element: 'graph',
+                    data: day_data,
+                    xkey: 'period',
+                    ykeys: ['licensed', 'sorned'],
+                    labels: ['Licensed', 'SORN']
+                });
+            }
+
+</script>
+
+
+
+

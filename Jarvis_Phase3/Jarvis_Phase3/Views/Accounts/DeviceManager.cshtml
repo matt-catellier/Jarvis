@@ -4,144 +4,79 @@
     Layout = "~/Views/Shared/_DashBoardTheme.cshtml";
 }
 
-<div class="row">
-    <div class="col-lg-12">
-        <h1 class="page-header">
-            Devices <small>Data Overview</small>
-        </h1>
-        <ol class="breadcrumb">
-            <li class="active">
-                <i class="fa fa-plug"></i> Devices
-            </li>
-        </ol>
-    </div>
-</div>
-<div class="container">
-    <div class="col-sm-8 page-content">
-        <div>
-            <table class="table col-md-12">
-                <thead>
-                    @Html.Raw("Thermostats")
-                </thead>
-                <tr>
-                    <th>
-                        @Html.Raw("Current Temperature")
-                    </th>
-                    <th>
-                        @Html.Raw("Target Temperature")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Name")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Id")
-                    </th>
-                    <th></th>
-                </tr>
+<head>
+    <link href="~/Content/scrollTheme/css/scrolling-nav.css" rel="stylesheet" />
+    <link href="~/Content/customStyles/about-support.css" rel="stylesheet" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="~/Content/Graphs/morris.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="~/Content/Graphs/morris.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+    </head>
 
-                @foreach (var item in Model.thermostatVMs)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Current_Temperature)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Target_Temperature)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name_Long)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Device_Id)
-                        </td>
-                    </tr>
-                }
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Devices <small>Data Overview</small>
+                </h1>
 
-            </table>
-            <table class="table col-md-12">
-                <thead>
-                    @Html.Raw("Cameras")
-                </thead>
-                <tr>
-                    <th>
-                        @Html.Raw("Online Status")
-                    </th>
-                    <th>
-                        @Html.Raw("Streaming Status")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Name")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Id")
-                    </th>
-                    <th></th>
-                </tr>
-
-                @foreach (var item in Model.cameraVMs)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Is_Online)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Is_Streaming)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name_Long)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Device_Id)
-                        </td>
-                    </tr>
-                }
-
-            </table>
-            <table class="table col-md-12">
-                <thead>
-                    @Html.Raw("Alarms")
-                </thead>
-                <tr>
-                    <th>
-                        @Html.Raw("Online Status")
-                    </th>
-                    <th>
-                        @Html.Raw("Smoke Alarm State")
-                    </th>
-                    <th>
-                        @Html.Raw("Co Alarm State")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Name")
-                    </th>
-                    <th>
-                        @Html.Raw("Device Id")
-                    </th>
-                    <th></th>
-                </tr>
-
-                @foreach (var item in Model.smokeCoAlarmVMs)
-                {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Is_Online)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Smoke_Alarm_State)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Co_Alarm_State)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name_Long)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Device_Id)
-                        </td>
-                    </tr>
-                }
-
-            </table>
+                @Html.Partial("Partials/ThermostatChart")
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-plug"></i> Devices
+                    </li>
+                </ol>
+            </div>
         </div>
-    </div>
+        <div class="container">
+            <div class="col-sm-8 page-content">
+            </div>
+        </div>
+
+
+
+
+<div>
+    <h4>ThermostatVM</h4>
+    <hr />
+    <table>
+        <thead>
+            @Html.Raw("Thermostats")
+        </thead>
+        <tr>
+            <th>
+                @Html.Raw("Current Temperature")
+            </th>
+            <th>
+                @Html.Raw("Target Temperature")
+            </th>
+            <th>
+                @Html.Raw("Device Name")
+            </th>
+            <th>
+                @Html.Raw("Device Id")
+            </th>
+            <th></th>
+        </tr>
+        @foreach (var item in Model.thermostatVMs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Current_Temperature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Target_Temperature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name_Long)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Device_Id)
+                </td>
+            </tr>
+        }
+    </table>
 </div>

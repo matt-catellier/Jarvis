@@ -1,0 +1,390 @@
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\ApplicationInsights.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\csc.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\vbc.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.pdb
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Owin.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\ApplicationInsights.config
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\csc.exe
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Collections.Immutable.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Reflection.Metadata.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\vbc.exe
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe.config
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.config
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.pdb
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Agent.Intercept.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Web.Infrastructure.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Owin.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+G:\Jarvis_Phase3\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\repo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\csc.exe
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\vbc.exe
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\ApplicationInsights.config
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.config
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.pdb
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Owin.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\ApplicationInsights.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\csc.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\vbc.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.pdb
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Owin.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Cors.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\ApplicationInsights.config
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\csc.exe
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Collections.Immutable.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\System.Reflection.Metadata.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\vbc.exe
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\roslyn\VBCSCompiler.exe.config
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.config
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.pdb
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\FirebaseSharp.Portable.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Agent.Intercept.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Web.Infrastructure.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Owin.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Cors.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\EntityFramework.SqlServer.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.DependencyCollector.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.Web.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AI.WindowsServer.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.ApplicationInsights.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.Core.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Microsoft.Owin.Security.Cookies.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\Newtonsoft.Json.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Extensions.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Primitives.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Razor.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Deployment.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Webpages.Razor.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Helpers.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Mvc.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Net.Http.Formatting.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
+D:\JarvisRepo\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
