@@ -426,6 +426,11 @@
     <Content Include="Views\Accounts\ConsumerDashboard.cshtml" />
     <Content Include="Views\Shared\_ConsumerDashboardTheme.cshtml" />
     <Content Include="Views\Shared\_AdminDashboardTheme.cshtml" />
+    <Content Include="Views\Shared\Partials\ThermostatChart.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Area1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Bar1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Donut1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Line1.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

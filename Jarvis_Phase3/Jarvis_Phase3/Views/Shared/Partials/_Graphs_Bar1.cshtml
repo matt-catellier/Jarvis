@@ -1,0 +1,63 @@
+﻿<head>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="~/Content/Graphs/morris.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <script src="~/Content/Graphs/morris.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+</head>
+
+        <style>
+            body {
+                width: 80%;
+                margin: 0 10px 0 10px;
+            }
+
+            #graph {
+                width: auto;
+                height: auto;
+                margin: 20px auto 0 auto;
+            }
+
+            pre {
+                height: 250px;
+                overflow: auto;
+            }
+        </style>
+
+        <div id="bar_graph"></div>
+
+        <script>bar_graph();
+            prettyPrint();
+
+            function bar_graph() {
+
+                var some_data = [
+                { x: '2011 Q1', y: 0, z: 8, a: 4 },
+                { x: '2011 Q2', y: 1, z: 7, a: 3 },
+                { x: '2011 Q3', y: 2, z: 6, a: 2 },
+                { x: '2011 Q4', y: 3, z: 5, a: 1 },
+                { x: '2012 Q1', y: 4, z: 4, a: 0 },
+                { x: '2012 Q2', y: 5, z: 3, a: 8 },
+                { x: '2012 Q3', y: 6, z: 2, a: 7 },
+                { x: '2012 Q4', y: 7, z: 1, a: 6 },
+                { x: '2013 Q1', y: 8, z: 0, a: 5 }
+                ];
+
+                Morris.Bar({
+                    element: 'bar_graph',
+                    data: some_data,
+                    xkey: 'x',
+                    ykeys: ['y', 'z', 'a'],
+                    labels: ['Y-axis label', 'Z-axis label', 'A-axis label']
+                }).on('click', function (i, row) {
+                    console.log(i, row);
+                });
+            }
+
+        </script>
+
+
+
