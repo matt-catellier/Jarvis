@@ -434,13 +434,13 @@ namespace Jarvis_Phase3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                ThermostatVMRepo thermoRepo = new ThermostatVMRepo();
+                ThermostatVMRepo thermoRepo = new ThermostatVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
 
-                CameraVMRepo camRepo = new CameraVMRepo();
+                CameraVMRepo camRepo = new CameraVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<CameraVM> cams = await camRepo.GetCameras();
 
-                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo();
+                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
 
                 NestVM nestModel = new NestVM(cams, therms, alarms);

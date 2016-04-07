@@ -11,7 +11,11 @@ namespace Jarvis_Phase3.Models
 {
     public class ThermostatVMRepo
     {
-        const string ACCESS_TOKEN = "c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49";
+        public ThermostatVMRepo(string token)
+        {
+            this.ACCESS_TOKEN = token;
+        }
+        private string ACCESS_TOKEN;
 
         // WILLR RETURN A LIST OF ALL THERMOSTATS WITH THIER NAME, STATE etc...
         public async Task<IEnumerable<ThermostatVM>> GetThermostats()
