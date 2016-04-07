@@ -332,7 +332,7 @@
     <Content Include="Views\Accounts\Insights.cshtml" />
     <Content Include="Views\Accounts\DeviceManager.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
-    <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
+    <Content Include="Views\Accounts\ViewAllConsumerAccounts_ORIGINAL.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs">
@@ -392,6 +392,8 @@
     <Compile Include="Models\Devices\SmokeCoAlarmVMRepo.cs" />
     <Compile Include="Models\Devices\ThermostatVM.cs" />
     <Compile Include="Models\Devices\ThermostatVMRepo.cs" />
+    <Compile Include="Models\EditableUser.cs" />
+    <Compile Include="Models\EditableUserRepo.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\RegisteredUser.cs" />
     <Compile Include="Models\UserAccountVM.cs" />
@@ -458,6 +460,8 @@
     <Content Include="Views\Shared\Partials\_Graphs_Donut1.cshtml" />
     <Content Include="Views\Shared\Partials\_Graphs_Area1.cshtml" />
     <Content Include="Views\Shared\Partials\ThermostatChart.cshtml" />
+    <Content Include="Views\Accounts\EditAccount.cshtml" />
+    <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

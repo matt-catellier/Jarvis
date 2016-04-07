@@ -468,7 +468,12 @@ namespace Jarvis_Phase3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+
+                EditableUserRepo editRepo = new EditableUserRepo();
+                var allUsers = editRepo.getUsers();
+                return View(allUsers);
             }
             else
             {

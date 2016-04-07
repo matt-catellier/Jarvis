@@ -24,7 +24,7 @@ namespace Jarvis_Phase3.Models
             return myUser;
         }
 
-        public IEnumerable<EditableUser> getUsers(string userID)
+        public IEnumerable<EditableUser> getUsers()
         {
             IEnumerable<EditableUser> myUsers = (from u in db.AspNetUsers
                                                  select new EditableUser()
