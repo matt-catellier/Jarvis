@@ -386,11 +386,13 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Devices\CameraVM.cs" />
     <Compile Include="Models\Devices\CameraVMRepo.cs" />
+    <Compile Include="Models\EditableUserRepo.cs" />
     <Compile Include="Models\Devices\NestVM.cs" />
     <Compile Include="Models\Devices\SmokeAlarmVM.cs" />
     <Compile Include="Models\Devices\SmokeCoAlarmVMRepo.cs" />
     <Compile Include="Models\Devices\ThermostatVM.cs" />
     <Compile Include="Models\Devices\ThermostatVMRepo.cs" />
+    <Compile Include="Models\EditableUser.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\RegisteredUser.cs" />
     <Compile Include="Models\UserAccountVM.cs" />
@@ -452,6 +454,7 @@
     <Content Include="Views\Accounts\PasswordEmail.cshtml" />
     <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <Content Include="Views\Accounts\ResultPassword.cshtml" />
+    <Content Include="Views\Accounts\EditAccount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -394,7 +394,13 @@ namespace Jarvis_Phase3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(myID);
+                return View(editUser);
             }
             else
             {
@@ -468,6 +474,43 @@ namespace Jarvis_Phase3.Controllers
             {
                 return RedirectToAction("Login", "Accounts");
             }
+        }
+
+        [HttpGet]
+        public ActionResult EditAccount()
+        {
+            var userStore = new UserStore<IdentityUser>();
+            UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+            var user = manager.FindByName(User.Identity.Name);
+            string myID = user.Id;
+            EditableUserRepo editRepo = new EditableUserRepo();
+            EditableUser editUser = editRepo.getUser(myID);
+            return View(editUser);
+        }
+        [HttpPost]
+        public ActionResult EditAccount(EditableUser editedUser)
+        {
+            if (ModelState.IsValid)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                editRepo.updateUser(editedUser);
+                IAuthenticationManager authenticationManager
+                                           = HttpContext.GetOwinContext().Authentication;
+                authenticationManager
+               .SignOut(DefaultAuthenticationTypes.ExternalCookie);
+
+                var identity = new ClaimsIdentity(new[] {
+                                            new Claim(ClaimTypes.Name, editedUser.UserName),
+                                        },
+                                    DefaultAuthenticationTypes.ApplicationCookie,
+                                    ClaimTypes.Name, ClaimTypes.Role);
+
+                authenticationManager.SignIn(new AuthenticationProperties
+                {
+                    IsPersistent = false
+                }, identity);
+            }
+            return RedirectToAction("AccountView");
         }
     }
 }
