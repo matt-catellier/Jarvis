@@ -390,11 +390,40 @@ namespace Jarvis_Phase3.Controllers
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
+        public async Task<ActionResult> ConsumerDashboard2()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                ThermostatVMRepo thermoRepo = new ThermostatVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
+                IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
+
+                CameraVMRepo camRepo = new CameraVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
+                IEnumerable<CameraVM> cams = await camRepo.GetCameras();
+
+                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
+                IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
+
+                NestVM nestModel = new NestVM(cams, therms, alarms);
+
+                return View(nestModel); ;
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+        }
         public ActionResult AccountView()
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(myID);
+                return View(editUser);
             }
             else
             {
@@ -428,13 +457,13 @@ namespace Jarvis_Phase3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                ThermostatVMRepo thermoRepo = new ThermostatVMRepo();
+                ThermostatVMRepo thermoRepo = new ThermostatVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<ThermostatVM> therms = await thermoRepo.GetThermostats();
 
-                CameraVMRepo camRepo = new CameraVMRepo();
+                CameraVMRepo camRepo = new CameraVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<CameraVM> cams = await camRepo.GetCameras();
 
-                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo();
+                SmokeCoAlarmVMRepo alarmRepo = new SmokeCoAlarmVMRepo("c.QY4JkcdwELewWkIDfbgCm2WSEHlaKSvI6g6dpWVOf7levs96rMRByP4xRQksCJUfxrSgYKPwiUKzj1OcgIad2nxerddqp4QvMleuC55br637xaGnychVSl4yMUoQBoWI8uFg1dI9uiK2hZ49");
                 IEnumerable<SmokeCoAlarmVM> alarms = await alarmRepo.GetAlarms();
 
                 NestVM nestModel = new NestVM(cams, therms, alarms);
@@ -462,12 +491,60 @@ namespace Jarvis_Phase3.Controllers
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+
+                EditableUserRepo editRepo = new EditableUserRepo();
+                var allUsers = editRepo.getUsers();
+                return View(allUsers);
             }
             else
             {
                 return RedirectToAction("Login", "Accounts");
             }
+        }
+
+        [HttpGet]
+        public ActionResult EditAccount()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(myID);
+                return View(editUser);
+            }else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+        }
+        [HttpPost]
+        public ActionResult EditAccount(EditableUser editedUser)
+        {
+            if (ModelState.IsValid)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                editRepo.updateUser(editedUser);
+                IAuthenticationManager authenticationManager
+                                           = HttpContext.GetOwinContext().Authentication;
+                authenticationManager
+               .SignOut(DefaultAuthenticationTypes.ExternalCookie);
+
+                var identity = new ClaimsIdentity(new[] {
+                                            new Claim(ClaimTypes.Name, editedUser.UserName),
+                                        },
+                                    DefaultAuthenticationTypes.ApplicationCookie,
+                                    ClaimTypes.Name, ClaimTypes.Role);
+
+                authenticationManager.SignIn(new AuthenticationProperties
+                {
+                    IsPersistent = false
+                }, identity);
+            }
+            return RedirectToAction("AccountView");
         }
     }
 }

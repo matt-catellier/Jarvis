@@ -1,0 +1,66 @@
+﻿@{
+    ViewBag.Title = "ViewAllConsumerAccounts";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
+}
+
+<h2>@Html.Raw(ViewBag.Title)</h2>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 page-content">
+            <div>
+                <table class="table table-condensed table-responsive">
+                    <tr>
+                        <th style="width: 200px;">User Name</th>
+                        <th style="width: 200px;">First</th>
+                        <th style="width: 200px;">Last</th>
+                        <th style="width: 200px;">Email</th>
+                        <th style="width: 200px;">Account Type</th>
+                    </tr>
+                    <tr>
+                        <td><a href="@Url.Action("ConsumerDashboard")"> janedoe </a></td>
+                        <td>Jane</td>
+                        <td>Doe</td>
+                        <td>janedoe@gmail.com</td>
+                        <td>Paid</td>
+                    </tr>
+                    <tr>
+                        <td>mhmed</td>
+                        <td>Mohammed</td>
+                        <td>Ahmed</td>
+                        <td>mhmed@shaw.ca</td>
+                        <td>Paid</td>
+                    </tr>
+                    <tr>
+                        <td>shaniadwayne</td>
+                        <td>Shania</td>
+                        <td>Dwayne</td>
+                        <td>shania@email.com</td>
+                        <td>Free Trial</td>
+                    </tr>
+                    <tr>
+                        <td>bambang</td>
+                        <td>Susilo Bambang</td>
+                        <td>Yudhoyono</td>
+                        <td>bambangkid@yahoo.com</td>
+                        <td>Premium</td>
+                    </tr>
+                    <tr>
+                        <td>songmin-soon</td>
+                        <td>Song</td>
+                        <td>Min-soon</td>
+                        <td>songmin-soon@un.org</td>
+                        <td>Free Trial</td>
+                    </tr>
+                    <tr>
+                        <td>aleksandarvucic</td>
+                        <td>Aleksandar</td>
+                        <td>Vucic</td>
+                        <td>alekvucic@freemail.com</td>
+                        <td>Paid</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -3,30 +3,33 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title> Jarvis - Admin</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
     <!-- ADMIN THEME STYLES -->
     <link href="~/Content/dashTheme/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
-    <link href="~/Content/dashTheme/css/plugins/morris.css" rel="stylesheet" />
     <link href="~/Content/dashTheme/css/sb-admin.css" rel="stylesheet" />
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
-    <link href="~/Content/customStyles/dashTheme.css" rel="stylesheet" />
 
-    
+    <!-- TO MAKE MORRIS GRAPHS WORK -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+    <link href="~/Content/Graphs/morris.css" rel="stylesheet" />
+    <script src="~/Content/Graphs/morris.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.js"></script>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.min.css">
+
+    <!-- CUSTOM STYLES -->
+    <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
+    <link href="~/Content/customStyles/adminDashboard.css" rel="stylesheet" />
     @RenderSection("Styles", false)
-    <style>
-        body {
-            padding-bottom: 0px;
-        }
-    </style>
 </head>
 <body>
     <div id="wrapper">
@@ -104,7 +107,7 @@
                             <a href="@Url.Action("ViewAllConsumerAccounts")"><i class="fa fa-fw fa-user"></i> View Accounts </a>
                         </li>    
                         <li>
-                            <a href="@Url.Action("AddUserToRole")"><i class="fa fa-fw fa-plus"></i> Add Role </a>
+                            <a href="@Url.Action("AddUserToRole")"><i class="fa fa-fw fa-plus"></i> Assign User Role </a>
                         </li>                
                         <li>
                             <a href="@Url.Action("Data")"><i class="fa fa-fw fa-table"></i> View Data </a>
@@ -121,7 +124,6 @@
                 @RenderBody()
             </div>
         </div>
-      
         <script src="~/Scripts/jquery-1.10.2.min.js"></script>
         <script>
             // small script to toggle the "darker" item
@@ -134,11 +136,7 @@
                     }
                 })
             })
-        </script>
-        <script src="~/Scripts/bootstrap.min.js"></script>
-        <script src="~/Content/dashTheme/js/plugins/morris/raphael.min.js"></script>
-        <script src="~/Content/dashTheme/js/plugins/morris/morris.min.js"></script>
-        <script src="~/Content/dashTheme/js/plugins/morris/morris-data.js"></script>
+        </script>     
         @RenderSection("Scripts", false)
     </div><!-- CLOSES WRAPPER -->
 </body>

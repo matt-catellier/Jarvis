@@ -26,7 +26,6 @@
 
     </style> 
 }
-
 <div class="row">
     <div class="col-sm-12 page-content">
         <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
@@ -35,14 +34,11 @@
             <h3> Users </h3>
             @Html.Partial("Partials/_Graphs_Area1")
         </div>
-
         <div class="col-sm-6">
                 <a class="btn btn-primary view-all" href="@Url.Action("Data")"> View All</a>
                 <h3> Devices </h3>
-
                 @Html.Partial("Partials/_Graphs_Donut1")
         </div>
- 
     </div>
 </div>
 

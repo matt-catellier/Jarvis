@@ -1,0 +1,56 @@
+﻿@model Jarvis_Phase3.Models.NestVM
+
+@{
+    ViewBag.Title = "ConsumerDashboard2";
+    Layout = "~/Views/Shared/_ConsumerDashboardTheme.cshtml";
+}
+<div class="row">
+    <div class="col-lg-12">
+        <ol class="breadcrumb">
+            <li class="active">
+                <i class="fa fa-dashboard"></i> Dashboard
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-12 col-lg-4">
+        <div class="panel panel-green">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-bar-chart-o"></i> Area Line Graph Example with Tooltips</h3>
+            </div>
+            <div class="panel-body">
+                @Html.Partial("Partials/ThermostatChart")
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.row -->
+<div class="row col-lg-4">
+    <div class="col-lg-4">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Donut Chart Example</h3>
+            </div>
+            <div class="panel-body">
+                @Html.Partial("Partials/smokeCoAlarmChart")
+                <div class="text-right">
+                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="panel panel-red">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-long-arrow-right"></i> Line Graph Example with Tooltips</h3>
+            </div>
+            <div class="panel-body">
+                @Html.Partial("Partials/CameraTable")>
+                <div class="text-right">
+                    <a href="#">View Details <i class="fa fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

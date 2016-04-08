@@ -195,6 +195,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\customStyles\about-support.css" />
+    <Content Include="Content\customStyles\adminDashboard.css" />
     <Content Include="Content\customStyles\dashTheme.css" />
     <Content Include="Content\customStyles\footer.css" />
     <Content Include="Content\customStyles\login.css" />
@@ -319,7 +320,6 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Views\Shared\Partials\example.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\AboutSupport.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -332,7 +332,7 @@
     <Content Include="Views\Accounts\Insights.cshtml" />
     <Content Include="Views\Accounts\DeviceManager.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
-    <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
+    <Content Include="Views\Accounts\ViewAllConsumerAccounts_ORIGINAL.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs">
@@ -392,6 +392,8 @@
     <Compile Include="Models\Devices\SmokeCoAlarmVMRepo.cs" />
     <Compile Include="Models\Devices\ThermostatVM.cs" />
     <Compile Include="Models\Devices\ThermostatVMRepo.cs" />
+    <Compile Include="Models\EditableUser.cs" />
+    <Compile Include="Models\EditableUserRepo.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\RegisteredUser.cs" />
     <Compile Include="Models\UserAccountVM.cs" />
@@ -458,6 +460,11 @@
     <Content Include="Views\Shared\Partials\_Graphs_Donut1.cshtml" />
     <Content Include="Views\Shared\Partials\_Graphs_Area1.cshtml" />
     <Content Include="Views\Shared\Partials\ThermostatChart.cshtml" />
+    <Content Include="Views\Accounts\EditAccount.cshtml" />
+    <Content Include="Views\Accounts\ViewAllConsumerAccounts.cshtml" />
+    <Content Include="Views\Shared\Partials\smokeCoAlarmChart.cshtml" />
+    <Content Include="Views\Shared\Partials\CameraTable.cshtml" />
+    <Content Include="Views\Accounts\ConsumerDashboard2.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
