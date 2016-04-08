@@ -4,27 +4,36 @@
     ViewBag.Title = "AddUserToRole";
     Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
+
+@section Styles {
+    <style> 
+        .row h1 {
+            margin-left: 20%;
+        }
+        form label {
+              text-align: left;
+        }
+    </style>
+    }
 <div class="container-fluid">
     <div class="row">
+        <h1> Assign Role </h1>
         <div class="col-sm-8 page-content">
-            <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
-
-                <div class="form-horizontal">
-                    <h4>UserRole</h4>
+                <div class="form-horizontal">             
                     <hr />
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
-                        @Html.LabelFor(model => model.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <label class="control-label col-md-2" for="UserName">Username:</label>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.UserName, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "text-danger" })
                         </div>
                     </div>
                     <div class="form-group">
-                        @Html.LabelFor(model => model.RoleName, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <label class="control-label col-md-2" for="RoleName">Role:</label>
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.RoleName, new { htmlAttributes = new { @class = "form-control" } })
                             @Html.ValidationMessageFor(model => model.RoleName, "", new { @class = "text-danger" })

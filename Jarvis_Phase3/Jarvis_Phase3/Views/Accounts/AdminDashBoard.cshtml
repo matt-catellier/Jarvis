@@ -1,34 +1,48 @@
 ﻿
 @{
-    ViewBag.Title = "AdminDashBoard";
+    ViewBag.Title = "DashBoard";
     Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
 
+@section Styles{
+    <style>
+        body {
+            width: 100% !important;
+        }
+
+        .view-all {
+            float: right;
+            margin-top:20px;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+        h3 {
+            margin-left: 20px;
+        }
+
+        .row {
+            height: 700px;
+        }
+
+    </style> 
+}
+
 <div class="row">
-    <p>@DateTime.Now.ToString("F")</p>
-    <div class="col-sm-8 page-content">
+    <div class="col-sm-12 page-content">
         <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
-        <p>@DateTime.Now.ToString("F")</p>
-        <div class="col-sm-6">
-            <h3> Manage Consumer Accounts </h3>
-            <ul>
-                <li>@Html.ActionLink("View all Consumer Accounts", "ViewAllConsumerAccounts")</li>
-                <li> Sign into Consumer Account </li>
-                <li> Create a new Consumer Account </li>
-                <li> Update a  Consumer Account Info </li>
-                <li> Delete a Consumer Account </li>
-            </ul>
+        <div class="col-sm-6 clearfix">
+            <a class="btn btn-primary view-all" href="@Url.Action("ViewAllConsumerAccounts")"> View All</a>
+            <h3> Users </h3>
+            @Html.Partial("Partials/_Graphs_Area1")
         </div>
+
         <div class="col-sm-6">
-            <h3> Manage Providers </h3>
-            <ul>
-                <li> View all Providers </li>
-                <li> Sign into Provider Account </li>
-                <li> Create a new Provider Account </li>
-                <li> Edit a Provider Account Info </li>
-                <li> Delete a Provider Account </li>
-            </ul>
+                <a class="btn btn-primary view-all" href="@Url.Action("Data")"> View All</a>
+                <h3> Devices </h3>
+
+                @Html.Partial("Partials/_Graphs_Donut1")
         </div>
+ 
     </div>
 </div>
 

@@ -19,7 +19,14 @@
     <![endif]-->
     <link href="~/Content/customStyles/footer.css" rel="stylesheet" />
     <link href="~/Content/customStyles/dashTheme.css" rel="stylesheet" />
+
+    
     @RenderSection("Styles", false)
+    <style>
+        body {
+            padding-bottom: 0px;
+        }
+    </style>
 </head>
 <body>
     <div id="wrapper">
@@ -91,16 +98,16 @@
                             <a href="@Url.Action("AdminDashboard")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="@Url.Action("RegisterDevices")"><i class="fa fa-fw fa-user"></i> Register Devices </a>
+                            <a href="@Url.Action("RegisterDevices")"><i class="fa fa-fw fa-plug"></i> Register Devices </a>
                         </li>
                         <li>
-                            <a href="@Url.Action("ViewAllConsumerAccounts")"><i class="fa fa-fw fa-plug"></i> View Accounts </a>
+                            <a href="@Url.Action("ViewAllConsumerAccounts")"><i class="fa fa-fw fa-user"></i> View Accounts </a>
                         </li>    
                         <li>
-                            <a href="@Url.Action("AddUserToRole")"><i class="fa fa-fw fa-lightbulb-o"></i> Manage Accounts </a>
+                            <a href="@Url.Action("AddUserToRole")"><i class="fa fa-fw fa-plus"></i> Add Role </a>
                         </li>                
                         <li>
-                            <a href="@Url.Action("Data")"><i class="fa fa-fw fa-plug"></i> View Data </a>
+                            <a href="@Url.Action("Data")"><i class="fa fa-fw fa-table"></i> View Data </a>
                         </li>                        
                         
                     </ul>
@@ -108,43 +115,13 @@
             </div>
             <!-- /.navbar-collapse -->
         </nav>
-        <div id="page-wrapper">
+
+        <div id="page-wrapper" style="margin-top: 70px; padding:0">
             <div class="container-fluid">
                 @RenderBody()
             </div>
         </div>
-        <footer class="col-sm-12 clearfix">
-            <div class="col-sm-7">
-                <div class="col-sm-1">
-                </div>
-                <div class="col-sm-4">
-                    <h4> Providers </h4>
-                    <ul>
-                        <li><a href="#"> NEST </a></li>
-                        <li><a href="#"> Phillips </a></li>
-                        <li><a href="#"> Amazon </a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-4">
-                    <h4> Company </h4>
-                    <ul>
-                        <li> <a href="#"> Login </a></li>
-                        <li> <a href="#"> Register </a></li>
-                        <li> <a href="#"> About </a></li>
-                        <li><a href="#"> Support </a> </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-sm-4 socail">
-                <div class="icons">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"> <i class="fa fa-twitter"></i> </a>
-                    <a href="#"> <i class="fa fa-linkedin"></i> </a>
-                </div>
-                <hr />
-                <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-            </div>
-        </footer>
+      
         <script src="~/Scripts/jquery-1.10.2.min.js"></script>
         <script>
             // small script to toggle the "darker" item

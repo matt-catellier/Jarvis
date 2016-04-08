@@ -1,0 +1,40 @@
+﻿<style>
+    body {
+        width: 80%;
+        margin: 0 10px 0 10px;
+    }
+
+    #graph {
+        width: auto;
+        height: auto;
+        margin: 20px auto 0 auto;
+    }
+
+    pre {
+        height: 250px;
+        overflow: auto;
+    }
+</style>
+
+<div id="donut_graph">
+    
+</div>
+
+<script>
+    donut_graph();
+    prettyPrint();
+
+        function donut_graph() {
+            Morris.Donut({
+                element: 'donut_graph',
+                data: [
+                  { value: 70, label: 'foo', formatted: 'at least 70%' },
+                  { value: 15, label: 'bar', formatted: 'approx. 15%' },
+                  { value: 10, label: 'baz', formatted: 'approx. 10%' },
+                  { value: 5, label: 'A really really long label', formatted: 'at most 5%' }
+                ],
+                formatter: function (x, data) { return data.formatted; }
+            });
+        }
+</script>
+

@@ -203,7 +203,6 @@
     <Content Include="Content\dashTheme\css\bootstrap-rtl.min.css" />
     <Content Include="Content\dashTheme\css\bootstrap.css" />
     <Content Include="Content\dashTheme\css\bootstrap.min.css" />
-    <Content Include="Content\dashTheme\css\plugins\morris.css" />
     <Content Include="Content\dashTheme\css\sb-admin-rtl.css" />
     <Content Include="Content\dashTheme\css\sb-admin.css" />
     <Content Include="Content\dashTheme\font-awesome\css\font-awesome.css" />
@@ -219,10 +218,11 @@
     <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.pie.js" />
     <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.resize.js" />
     <Content Include="Content\dashTheme\js\plugins\flot\jquery.flot.tooltip.min.js" />
-    <Content Include="Content\dashTheme\js\plugins\morris\morris-data.js" />
-    <Content Include="Content\dashTheme\js\plugins\morris\morris.js" />
-    <Content Include="Content\dashTheme\js\plugins\morris\morris.min.js" />
-    <Content Include="Content\dashTheme\js\plugins\morris\raphael.min.js" />
+    <Content Include="Content\Graphs\morris-data.js" />
+    <Content Include="Content\Graphs\morris.min.js" />
+    <Content Include="Content\Graphs\raphael.min.js" />
+    <Content Include="Content\Graphs\morris.css" />
+    <Content Include="Content\Graphs\morris.js" />
     <Content Include="Content\scrollTheme\css\bootstrap.css" />
     <Content Include="Content\scrollTheme\css\bootstrap.min.css" />
     <Content Include="Content\scrollTheme\css\scrolling-nav.css" />
@@ -319,6 +319,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Views\Shared\Partials\example.css" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\AboutSupport.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -452,6 +453,11 @@
     <Content Include="Views\Accounts\PasswordEmail.cshtml" />
     <Content Include="Views\Accounts\ResetPassword.cshtml" />
     <Content Include="Views\Accounts\ResultPassword.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Line1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Bar1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Donut1.cshtml" />
+    <Content Include="Views\Shared\Partials\_Graphs_Area1.cshtml" />
+    <Content Include="Views\Shared\Partials\ThermostatChart.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

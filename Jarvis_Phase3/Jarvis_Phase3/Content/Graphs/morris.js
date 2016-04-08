@@ -171,7 +171,7 @@ Licensed under the BSD-2-Clause License.
       grid: true,
       gridLineColor: '#aaa',
       gridStrokeWidth: 0.5,
-      gridTextColor: '#888',
+      gridTextColor: '#aaa',
       gridTextSize: 12,
       gridTextFamily: 'sans-serif',
       gridTextWeight: 'normal',
@@ -191,7 +191,7 @@ Licensed under the BSD-2-Clause License.
       events: [],
       eventStrokeWidth: 1.0,
       eventLineColors: ['#005a04', '#ccffbb', '#3a5f0b', '#005502'],
-      rangeSelect: null,
+	  rangeSelect: null,
       rangeSelectColor: '#eef',
       resize: false
     };
@@ -740,7 +740,9 @@ Licensed under the BSD-2-Clause License.
     Line.prototype.defaults = {
       lineWidth: 3,
       pointSize: 4,
-      lineColors: ['#0b62a4', '#7A92A3', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+      //lineColors: ['#0b62a4', '#7A92A3', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+	  
+	  lineColors: ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'grey'],
       pointStrokeWidths: [1],
       pointStrokeColors: ['#ffffff'],
       pointFillColors: [],
@@ -1406,7 +1408,10 @@ Licensed under the BSD-2-Clause License.
     Bar.prototype.defaults = {
       barSizeRatio: 0.75,
       barGap: 3,
-      barColors: ['#0b62a4', '#7a92a3', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+      //barColors: ['#0b62a4', '#7a92a3', '#4da74d', '#afd8f8', '#edc240', '#cb4b4b', '#9440ed'],
+	  
+	  barColors: ['red', 'blue', 'green', 'yellow', 'purple', 'orange', 'violet'],
+	  
       barOpacity: 1.0,
       barRadius: [0, 0, 0, 0],
       xLabelMargin: 50
@@ -1631,7 +1636,12 @@ Licensed under the BSD-2-Clause License.
     __extends(Donut, _super);
 
     Donut.prototype.defaults = {
-      colors: ['#0B62A4', '#3980B5', '#679DC6', '#95BBD7', '#B0CCE1', '#095791', '#095085', '#083E67', '#052C48', '#042135'],
+      //colors: ['#0B62A4', '#3980B5', '#679DC6', '#95BBD7', '#B0CCE1', '#095791', '#095085', '#083E67', '#052C48', '#042135'],
+	  
+	  colors: [ 'red', 'blue', 'green', 'yellow', 'purple', 'orange', 'violet', 'cyan', 'lightseagreen ', 'orangered '],
+	  
+	 
+	  
       backgroundColor: '#FFFFFF',
       labelColor: '#000000',
       formatter: Morris.commas,
