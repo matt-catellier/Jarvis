@@ -15,8 +15,10 @@ namespace Jarvis_Phase3
     {
         void Application_Start(object sender, EventArgs e)
         {
-            // for authentication
-            AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
+            
+
+            // to enable role creation
+
 
             // for JSON
             GlobalConfiguration.Configure(WebApiConfig.Register);
@@ -25,8 +27,11 @@ namespace Jarvis_Phase3
 
             // default
             AreaRegistration.RegisterAllAreas();
-            RouteConfig.RegisterRoutes(RouteTable.Routes);      
-                        
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            // for authentication
+            AntiForgeryConfig.SuppressIdentityHeuristicChecks = true;
+
         }
     }
 }

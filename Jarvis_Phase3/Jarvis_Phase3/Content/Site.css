@@ -159,9 +159,6 @@ footer a:hover{
 }
 
 
-
-
-tr:nth-child(even) {background: #A9E2F3; color: black; }
 /* tr:nth-child(odd) {background: #FFFFFF} */
 
 /* === FORM STLYLES === */
@@ -176,3 +173,24 @@ tr:nth-child(even) {background: #A9E2F3; color: black; }
 
 
 }
+
+/* TABLES */
+
+        .panel-body {
+            padding: 0;
+            padding-bottom: 10px;
+        }
+        .panel-red .panel-heading {
+            border-color: #d9534f;
+        }
+
+        .panel-red .table tbody > tr > td, .panel-red .table tbody > tr > th  {
+            border-color: #d9534f;
+        }
+
+        .panel-yellow .panel-heading {
+            border-color: #f0ad4e;
+        }
+        .panel-yellow .table tbody > tr > td, .panel-yellow .table tbody > tr > th  {
+            border-color: #f0ad4e;
+        }

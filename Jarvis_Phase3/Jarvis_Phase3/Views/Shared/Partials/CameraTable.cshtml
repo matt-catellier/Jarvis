@@ -1,40 +1,31 @@
 ﻿@model Jarvis_Phase3.Models.NestVM
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table>
-    <thead>
-        @Html.Raw("SmokeAlarm")
-    </thead>
-    <tr>
-        <th>
-            @Html.Raw("Current Temperature")
-        </th>
-        <th>
-            @Html.Raw("Target Temperature")
-        </th>
-        <th>
-            @Html.Raw("Device Name")
-        </th>
-        <th>
-            @Html.Raw("Device Id")
-        </th>
-        <th></th>
-    </tr>
-@foreach (var item in Model.cameraVMs) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name_Long)
-        </td> 
-        <td>
-            @Html.DisplayFor(modelItem => item.Is_Online)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Is_Streaming)
-        </td>
-       
-        
-    </tr>
-}
-</table>
+<div class="table-responsive">
+    <table class="table">
+        <tr class="panel-heading">
+            <td>
+                @Html.Raw("Device")
+            </td>
+            <td>
+                @Html.Raw("Online")
+            </td>
+            <td>
+                @Html.Raw("Streaming")
+            </td>
+        </tr>
+        @foreach (var item in Model.cameraVMs)
+        {
+            <tr class="panel-heading">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name_Long)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_Online)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Is_Streaming)
+                </td>
+            </tr>
+        }
+    </table>
+</div>

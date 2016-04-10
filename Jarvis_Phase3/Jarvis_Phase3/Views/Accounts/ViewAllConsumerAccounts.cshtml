@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "ViewAllConsumerAccounts";
-    Layout = "~/Views/Shared/_ScrollTheme.cshtml";
+    Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
 
 <h2>ViewAllConsumerAccounts</h2>
@@ -42,9 +42,8 @@
             @Html.DisplayFor(modelItem => item.Email)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink("Edit", "AdminAccountView", "Accounts" , new { id = item.ID }, null) |           
+            @Html.ActionLink("Delete", "DeleteAccount", "Accounts" , new { id=item.ID }, null)
         </td>
     </tr>
 }

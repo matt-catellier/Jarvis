@@ -53,5 +53,18 @@ namespace Jarvis_Phase3.Models
 
             db.SaveChanges();
         }
+
+        public void deleteUser(EditableUser editedUser)
+        {
+            AspNetUser aspUser = db.AspNetUsers.Where(u => u.Id == editedUser.ID)
+                                            .FirstOrDefault();
+            Account account = db.Accounts.Where(a => a.accountID == editedUser.ID)
+                                            .FirstOrDefault();
+
+            db.AspNetUsers.Remove(aspUser);
+            db.Accounts.Remove(account);
+
+            db.SaveChanges();
+        }
     }
 }

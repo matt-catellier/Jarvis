@@ -4,36 +4,11 @@
     ViewBag.Title = "DeviceManager";
 }
 
-<style>
-    body {
-        width: 80%;
-        margin: 0 10px 0 10px;
-    }
-
-    #graph {
-        width: auto;
-        height: auto;
-        margin: 20px auto 0 auto;
-    }
-
-    pre {
-        height: 250px;
-        overflow: auto;
-    }
-</style>
-<ol class="breadcrumb">
-    <li class="active">
-        <i class="fa fa-plug"></i> Devices
-    </li>
-</ol>
-    <div id="line_graph"></div>
-
-
+<div id="line_graph"></div>
 
 <script>
     line_graph();
     prettyPrint();
-
     function line_graph() {
         var day_data = [
             @foreach (var item in Model.thermostatVMs)
@@ -44,8 +19,6 @@
             }
 
         ]
-
-
         Morris.Line({
             element: 'line_graph',
             data: day_data,

@@ -72,7 +72,7 @@ namespace Jarvis_Phase3.Controllers
                     }
                     else if (query.AspNetRoles.Single().Name == "consumer")
                     {
-                        return RedirectToAction("ConsumerDashboard", "Accounts");
+                        return RedirectToAction("ConsumerDashboard2", "Accounts");
                     }
                 }
             }
@@ -260,6 +260,7 @@ namespace Jarvis_Phase3.Controllers
         /* ============================ */
         /* ===== ADMIN PRIVILEGES ===== */
         /* ============================ */
+
         [HttpGet]
         public ActionResult AddRole()
         {
@@ -294,6 +295,7 @@ namespace Jarvis_Phase3.Controllers
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
         [HttpPost]
         public ActionResult AddUserToRole(string userName, string roleName)
         {
@@ -366,7 +368,6 @@ namespace Jarvis_Phase3.Controllers
         /* ================= */
         /* ===== PAGES ===== */
         /* ================= */
-
         public ActionResult AdminDashBoard()
         {
             if (User.Identity.IsAuthenticated)
@@ -378,11 +379,15 @@ namespace Jarvis_Phase3.Controllers
                 return RedirectToAction("Login", "Accounts");
             }
         }
-
+        [Authorize(Roles = "admin, consumer")]
         public ActionResult ConsumerDashboard()
         {
             if (User.Identity.IsAuthenticated)
             {
+                if(User.IsInRole("admin"))
+                {
+                    return RedirectToAction("AdminDashboard");
+                }
                 return View();
             }
             else
@@ -406,13 +411,32 @@ namespace Jarvis_Phase3.Controllers
 
                 NestVM nestModel = new NestVM(cams, therms, alarms);
 
-                return View(nestModel); ;
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+
+                JarvisEntities context = new JarvisEntities();
+                var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
+
+                if (query.AspNetRoles.Single().Name == "admin")
+                {
+                    ViewBag.Role = "admin";
+                    return View(nestModel);
+                }
+                else
+                {
+                    ViewBag.Role = "consumer";
+                    return View(nestModel);
+                }
+                
             }
             else
             {
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
         public ActionResult AccountView()
         {
             if (User.Identity.IsAuthenticated)
@@ -423,6 +447,33 @@ namespace Jarvis_Phase3.Controllers
                 string myID = user.Id;
                 EditableUserRepo editRepo = new EditableUserRepo();
                 EditableUser editUser = editRepo.getUser(myID);
+
+                JarvisEntities context = new JarvisEntities();
+                var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
+
+                if (query.AspNetRoles.Single().Name == "admin")
+                {
+                    ViewBag.Role = "admin";
+                    return View(editUser);
+                }
+                else
+                {
+                    ViewBag.Role = "consumer";
+                    return View(editUser);
+                }
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+        }
+        [HttpGet]
+        public ActionResult AdminAccountView(string id)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(id);
                 return View(editUser);
             }
             else
@@ -430,6 +481,33 @@ namespace Jarvis_Phase3.Controllers
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
+        [HttpPost]
+        public ActionResult AdminAccountView(EditableUser editedUser)
+        {
+            if (ModelState.IsValid)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                editRepo.updateUser(editedUser);
+                IAuthenticationManager authenticationManager
+                                           = HttpContext.GetOwinContext().Authentication;
+                authenticationManager
+               .SignOut(DefaultAuthenticationTypes.ExternalCookie);
+
+                var identity = new ClaimsIdentity(new[] {
+                                            new Claim(ClaimTypes.Name, editedUser.UserName),
+                                        },
+                                    DefaultAuthenticationTypes.ApplicationCookie,
+                                    ClaimTypes.Name, ClaimTypes.Role);
+
+                authenticationManager.SignIn(new AuthenticationProperties
+                {
+                    IsPersistent = false
+                }, identity);
+            }
+            return RedirectToAction("ViewAllConsumerAccounts");
+        }
+
         public ActionResult Data()
         {
             if (User.Identity.IsAuthenticated)
@@ -441,6 +519,7 @@ namespace Jarvis_Phase3.Controllers
                 return RedirectToAction("Login", "Accounts");
             }
         }
+        // NOT IN USE
         public ActionResult Insights()
         {
             if (User.Identity.IsAuthenticated)
@@ -468,7 +547,24 @@ namespace Jarvis_Phase3.Controllers
 
                 NestVM nestModel = new NestVM(cams, therms, alarms);
 
-                return View(nestModel);
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+
+                JarvisEntities context = new JarvisEntities();
+                var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
+
+                if (query.AspNetRoles.Single().Name == "admin")
+                {
+                    ViewBag.Role = "admin";
+                    return View(nestModel);
+                }
+                else
+                {
+                    ViewBag.Role = "consumer";
+                    return View(nestModel);
+                }
             }
             else
             {
@@ -476,17 +572,36 @@ namespace Jarvis_Phase3.Controllers
             }
             
         }
+
         public ActionResult RegisterDevices()
         {
             if (User.Identity.IsAuthenticated)
             {
-                return View();
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+
+                JarvisEntities context = new JarvisEntities();
+                var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
+
+                if (query.AspNetRoles.Single().Name == "admin")
+                {
+                    ViewBag.Role = "admin";
+                    return View();
+                }
+                else
+                {
+                    ViewBag.Role = "consumer";
+                    return View();
+                }
             }
             else
             {
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
         public ActionResult ViewAllConsumerAccounts()
         {
             if (User.Identity.IsAuthenticated)
@@ -515,12 +630,27 @@ namespace Jarvis_Phase3.Controllers
                 string myID = user.Id;
                 EditableUserRepo editRepo = new EditableUserRepo();
                 EditableUser editUser = editRepo.getUser(myID);
-                return View(editUser);
+
+                JarvisEntities context = new JarvisEntities();
+                var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
+
+                if (query.AspNetRoles.Single().Name == "admin")
+                {
+                    ViewBag.Role = "admin";
+                    return View(editUser);
+                }
+                else
+                {
+                    ViewBag.Role = "consumer";
+                    return View(editUser);
+                }
+                
             }else
             {
                 return RedirectToAction("Login", "Accounts");
             }
         }
+
         [HttpPost]
         public ActionResult EditAccount(EditableUser editedUser)
         {
@@ -546,5 +676,67 @@ namespace Jarvis_Phase3.Controllers
             }
             return RedirectToAction("AccountView");
         }
+
+        //need a view to confirm deletion, or maybe just a popup from original page using js?
+        // can use JS to pop up another window whose conteent will call the delete post method...
+        [HttpGet]
+        public ActionResult DeleteAccount()
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                var userStore = new UserStore<IdentityUser>();
+                UserManager<IdentityUser> manager = new UserManager<IdentityUser>(userStore);
+                var user = manager.FindByName(User.Identity.Name);
+                string myID = user.Id;
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(myID);
+                return View(editUser);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+        }
+
+        public ActionResult DeleteAccount(string id)
+        {
+            if (User.Identity.IsAuthenticated)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                EditableUser editUser = editRepo.getUser(id);
+                return View(editUser);
+            }
+            else
+            {
+                return RedirectToAction("Login", "Accounts");
+            }
+        }
+        [HttpPost]
+        public ActionResult DeleteAccount(EditableUser editedUser)
+        {
+            if (ModelState.IsValid)
+            {
+                EditableUserRepo editRepo = new EditableUserRepo();
+                editRepo.updateUser(editedUser);
+                IAuthenticationManager authenticationManager
+                                           = HttpContext.GetOwinContext().Authentication;
+                authenticationManager
+               .SignOut(DefaultAuthenticationTypes.ExternalCookie);
+
+                var identity = new ClaimsIdentity(new[] {
+                                            new Claim(ClaimTypes.Name, editedUser.UserName),
+                                        },
+                                    DefaultAuthenticationTypes.ApplicationCookie,
+                                    ClaimTypes.Name, ClaimTypes.Role);
+
+                authenticationManager.SignIn(new AuthenticationProperties
+                {
+                    IsPersistent = false
+                }, identity);
+            }
+            return RedirectToAction("AccountView");
+        }
+
+
     }
 }

@@ -88,7 +88,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.0\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -329,7 +329,6 @@
     <Content Include="Views\Home\API.cshtml" />
     <Content Include="Views\Accounts\AccountView.cshtml" />
     <Content Include="Views\Accounts\Data.cshtml" />
-    <Content Include="Views\Accounts\Insights.cshtml" />
     <Content Include="Views\Accounts\DeviceManager.cshtml" />
     <Content Include="Views\Accounts\RegisterDevices.cshtml" />
     <Content Include="Views\Accounts\ViewAllConsumerAccounts_ORIGINAL.cshtml" />
@@ -359,7 +358,6 @@
     <Compile Include="Controllers\AccountsController.cs" />
     <Compile Include="Controllers\DevicesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ProviderController.cs" />
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>Jarvis3DB.tt</DependentUpon>
     </Compile>
@@ -465,6 +463,7 @@
     <Content Include="Views\Shared\Partials\smokeCoAlarmChart.cshtml" />
     <Content Include="Views\Shared\Partials\CameraTable.cshtml" />
     <Content Include="Views\Accounts\ConsumerDashboard2.cshtml" />
+    <Content Include="Views\Accounts\AdminAccountView.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
