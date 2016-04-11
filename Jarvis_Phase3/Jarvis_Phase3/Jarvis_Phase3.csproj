@@ -200,6 +200,7 @@
     <Content Include="Content\customStyles\footer.css" />
     <Content Include="Content\customStyles\login.css" />
     <Content Include="Content\customStyles\RegisterForm.css" />
+    <Content Include="Content\customStyles\ScrollingTheme.css" />
     <Content Include="Content\dashTheme\css\bootstrap-rtl.css" />
     <Content Include="Content\dashTheme\css\bootstrap-rtl.min.css" />
     <Content Include="Content\dashTheme\css\bootstrap.css" />

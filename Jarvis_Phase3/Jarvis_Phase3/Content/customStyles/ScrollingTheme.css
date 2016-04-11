@@ -1,0 +1,30 @@
+﻿.navbar {
+    padding: 0;
+}
+
+.body-content {
+    margin-top: 30px;
+}
+
+.navbar-nav>li>a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* LOGO */
+
+.navbar-fixed-top  img {
+    position: relative;
+    left: 5px;
+}
+
+/* hamburger icon */
+
+.navbar-toggle {
+    margin-top: 20px;
+}
+
+.navbar-collapse {
+    max-height: none;
+    text-align: center;
+}
