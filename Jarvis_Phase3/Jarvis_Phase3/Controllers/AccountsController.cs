@@ -66,14 +66,36 @@ namespace Jarvis_Phase3.Controllers
                     JarvisEntities context = new JarvisEntities();
                     var query = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
 
-                    if (query.AspNetRoles.Single().Name == "admin")
-                    {
-                        return RedirectToAction("AdminDashboard", "Accounts");
-                    }
-                    else if (query.AspNetRoles.Single().Name == "consumer")
+                    if (identityUser.Roles.Count == 0) // 0 is no roles assigned
                     {
                         return RedirectToAction("ConsumerDashboard2", "Accounts");
                     }
+                    else if (identityUser.Roles.Count == 1) // 1 is admin
+                    {
+                        return RedirectToAction("AdminDashboard", "Accounts");
+                    }
+                    /*
+                        Can't seem to get identityUser.Roles.Count == 2 (consumer).
+                        So i've set it where regular users have no roles, and admin will have the only role.
+                        AndrewH.
+                    */
+
+                    //if (query.AspNetRoles.Single().Name == "admin")
+                    //{
+                    //    return RedirectToAction("AdminDashboard", "Accounts");
+                    //}
+                    //else if (query.AspNetRoles.Single().Name == "consumer")
+                    //{
+                    //    return RedirectToAction("ConsumerDashboard2", "Accounts");
+                    //}
+                    /*
+                        This isn't a reliable way-- causes problem at times where the role's name can't be found for certain users.
+                        AndrewH.
+                    */
+                }
+                else
+                {
+                    ViewBag.Error = "Invalid username or password. Please try again.";
                 }
             }
             return View();
@@ -418,8 +440,8 @@ namespace Jarvis_Phase3.Controllers
 
                 JarvisEntities context = new JarvisEntities();
                 var query = context.AspNetUsers.Where(u => u.Id == myID).FirstOrDefault();
-
-                if (query.AspNetRoles.Single().Name == "admin")
+                
+                if (user.Roles.Count == 1)
                 {
                     ViewBag.Role = "admin";
                     return View(nestModel);
@@ -429,6 +451,16 @@ namespace Jarvis_Phase3.Controllers
                     ViewBag.Role = "consumer";
                     return View(nestModel);
                 }
+                //if (query.AspNetRoles.Single().Name == "admin")
+                //{
+                //    ViewBag.Role = "admin";
+                //    return View(nestModel);
+                //}
+                //else
+                //{
+                //    ViewBag.Role = "consumer";
+                //    return View(nestModel);
+                //}
                 
             }
             else

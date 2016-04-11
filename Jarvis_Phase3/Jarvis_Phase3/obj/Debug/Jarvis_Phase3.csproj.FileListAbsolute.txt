@@ -628,3 +628,6 @@ C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_v2\Jarvis_Phase3\Jarvis_Ph
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_v2\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_v2\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_v2\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Cors.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.dll
+C:\Users\A00867806\Desktop\local\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.Cors.xml
