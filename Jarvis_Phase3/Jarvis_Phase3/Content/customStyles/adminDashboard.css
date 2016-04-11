@@ -22,12 +22,3 @@ select,
 textarea {
     max-width: 280px;
 }
-
-
-
-@media (min-width: 768px) {
-    .side-nav { 
-        position: fixed;
-        top: 85px;
-    }
-}

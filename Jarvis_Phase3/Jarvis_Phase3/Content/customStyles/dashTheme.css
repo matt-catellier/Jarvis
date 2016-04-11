@@ -1,6 +1,7 @@
 ﻿body {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin-top: 80px;
 }
 
 nav {
@@ -12,7 +13,7 @@ nav {
 }
 
 .container-fluid {
-    padding: 0 10px 10px 10px;
+    padding: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -33,6 +34,21 @@ textarea {
 @media (min-width: 768px) {
     .side-nav { 
         position: fixed;
-        top: 85px;
+        top: 80px;
     }
+}
+
+.top-nav>li>a {
+    padding-top:18px;
+    padding-bottom: 20px;
+}
+
+.navbar-right > li > a  {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* HANBURGER ICON*/
+.navbar-inverse .navbar-toggle{
+    margin-top: 15px;
 }
