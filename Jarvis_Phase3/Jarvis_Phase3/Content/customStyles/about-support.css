@@ -9,6 +9,7 @@
 
 .row > div {
     padding-left: 0px;
+    margin: 0;
 }
 
 .row form {
@@ -23,12 +24,14 @@ section {
 }
 
 .support-section {
-    background-color: lightseagreen;
+    /*background-color: lightseagreen; */
+    
 }
 
 .about-section {
-    background-color: cadetblue;    
+    /*background-color: cadetblue;*/
     margin: 0px;
+    background-image: url('../../images/millions_of_icons.jpg');
 }
 .support-section h1 {
     margin-bottom: 40px;
@@ -41,6 +44,7 @@ section {
 
         background-color: #eee;
 }
+
 
 /*fieldset {
     background-color: black; color: white; opacity: 0.8;
