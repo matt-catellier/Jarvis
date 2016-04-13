@@ -198,6 +198,7 @@
     <Content Include="Content\customStyles\adminDashboard.css" />
     <Content Include="Content\customStyles\dashTheme.css" />
     <Content Include="Content\customStyles\footer.css" />
+    <Content Include="images\half-tone_blue.jpg" />
     <Content Include="Content\customStyles\login.css" />
     <Content Include="Content\customStyles\RegisterForm.css" />
     <Content Include="Content\customStyles\ScrollingTheme.css" />

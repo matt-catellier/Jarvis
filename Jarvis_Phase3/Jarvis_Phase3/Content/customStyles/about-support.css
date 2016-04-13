@@ -3,13 +3,18 @@
     margin-right: auto;
 }
 
+p {
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 1.0em;
+
+}
 .body-content {
     padding: 0px;
 }
 
 .row > div {
-    padding-left: 0px;
-    margin: 0;
+    /*padding-left: 0px;
+    margin: 0; */
 }
 
 .row form {
@@ -23,15 +28,12 @@ section {
     background: #EEE;
 }
 
-.support-section {
-    /*background-color: lightseagreen; */
-    
-}
+
 
 .about-section {
     /*background-color: cadetblue;*/
-    margin: 0px;
     background-image: url('../../images/millions_of_icons.jpg');
+    background-size: cover;
 }
 .support-section h1 {
     margin-bottom: 40px;
@@ -41,11 +43,23 @@ section {
 }
 
 .faq-section {
-
-        background-color: #eee;
+    background-image: url('../../images/desktop_laptop_tablet.jpg');
+    background-size: cover;
 }
 
+
+.support-section {
+    background-color: #5bc0de;
+   /* background-image: url('../../images/half-tone_blue.jpg'); */
+    background-size: cover;
+}
 
 /*fieldset {
     background-color: black; color: white; opacity: 0.8;
 }*/
+
+
+.opac-black {
+    
+}
+
