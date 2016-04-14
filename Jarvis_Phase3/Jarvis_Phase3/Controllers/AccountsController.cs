@@ -113,6 +113,13 @@ namespace Jarvis_Phase3.Controllers
                 UserName = newUser.UserName,
                 Email = newUser.Email
             };
+            //var accountUser = new RegisteredUser()
+            //{
+            //    UserName = newUser.UserName,
+            //    FirstName = newUser.FirstName,
+            //    LastName = newUser.LastName,
+            //    Email = newUser.em
+            //};
 
             IdentityResult result = manager.Create(identityUser, newUser.Password);
             JarvisEntities context = new JarvisEntities();
