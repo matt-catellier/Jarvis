@@ -64,33 +64,21 @@ namespace Jarvis_Phase3.Controllers
 
 
                     JarvisEntities context = new JarvisEntities();
-                    var query = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
+                    var user = context.AspNetUsers.Where(u => u.Id == identityUser.Id).FirstOrDefault();
 
-                    if (identityUser.Roles.Count == 0) // 0 is no roles assigned
-                    {
-                        return RedirectToAction("ConsumerDashboard2", "Accounts");
-                    }
-                    else if (identityUser.Roles.Count == 1) // 1 is admin
+                    // check users role
+                    if (user.AspNetRoles.Single().Name == "admin")
                     {
                         return RedirectToAction("AdminDashboard", "Accounts");
                     }
-                    /*
-                        Can't seem to get identityUser.Roles.Count == 2 (consumer).
-                        So i've set it where regular users have no roles, and admin will have the only role.
-                        AndrewH.
-                    */
-
-                    //if (query.AspNetRoles.Single().Name == "admin")
-                    //{
-                    //    return RedirectToAction("AdminDashboard", "Accounts");
-                    //}
-                    //else if (query.AspNetRoles.Single().Name == "consumer")
-                    //{
-                    //    return RedirectToAction("ConsumerDashboard2", "Accounts");
-                    //}
+                    else if (user.AspNetRoles.Single().Name == "consumer")
+                    {
+                        return RedirectToAction("ConsumerDashboard2", "Accounts");
+                    }
                     /*
                         This isn't a reliable way-- causes problem at times where the role's name can't be found for certain users.
                         AndrewH.
+                        Think that was becuase they didnt exist in the DB, now when  ever we register need to assign roleID 2
                     */
                 }
                 else
@@ -127,9 +115,20 @@ namespace Jarvis_Phase3.Controllers
             };
 
             IdentityResult result = manager.Create(identityUser, newUser.Password);
+            JarvisEntities context = new JarvisEntities();
+            AspNetUser user = context.AspNetUsers
+                             .Where(u => u.Id == identityUser.Id).FirstOrDefault();
+            AspNetRole role = context.AspNetRoles
+                             .Where(r => r.Name == "consumer").FirstOrDefault(); 
+
+            //user roles is abridge table so can't select it directly
+            user.AspNetRoles.Add(role);
+            context.SaveChanges();
 
             if (result.Succeeded)
             {
+
+
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
 
                 var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
@@ -145,53 +144,13 @@ namespace Jarvis_Phase3.Controllers
                 string response = mailer.EmailFromArvixe(
                                            new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
                 ViewBag.Response = response;
-
-
                 return View("EmailSent");
             }
             else
             {
-                ViewBag.Error = "Could not register new user.";
+                ViewBag.Error = "Oops, something whent wrong. Could not register new user. Please try again.";
                 return View();
             }
-
-            //    // this threw an error, but it also worked so what gives???
-            //    IdentityResult result = manager.Create(identityUser, newUser.Password);
-            //    if (result.Succeeded)
-            //    {
-            //        CreateTokenProvider(manager, EMAIL_CONFIRMATION);
-            //        // identityUser.Id use this to create an entry in our accounts table 
-            //        var code = manager.GenerateEmailConfirmationToken(identityUser.Id);
-            //        var callbackUrl = Url.Action("VerifiedEmail", "Accounts",
-            //                                        new { userId = identityUser.Id, code = code },
-            //                                            protocol: Request.Url.Scheme);
-
-            //        string email = "Please confirm your account by clicking this link: <a href=\""
-            //                        + callbackUrl + "\">Confirm Registration</a>";
-
-
-            //        ViewBag.FakeConfirmation = email;
-            //        UserAccountVMRepo uaRepo = new UserAccountVMRepo();
-            //        uaRepo.CreateAccount(newUser.FirstName, newUser.LastName, identityUser.Id);
-
-            //        // CREATE WITH CONSUMER ROLE BY DEFAULT
-            //        SecurityEntities context = new SecurityEntities();
-            //        AspNetUser user = context.AspNetUsers
-            //                         .Where(u => u.UserName == newUser.UserName).FirstOrDefault();
-            //        AspNetRole role = context.AspNetRoles
-            //                         .Where(r => r.Name == "consumer").FirstOrDefault();
-
-            //        user.AspNetRoles.Add(role);
-            //        context.SaveChanges();
-
-            //        MailHelper mailer = new MailHelper();
-            //        string response = mailer.EmailFromArvixe(
-            //                                   new RegisteredUser(newUser.Email, newUser.Subject = "Confirm Email", newUser.Body = email));
-
-            //        ViewBag.Response = response;
-            //        return View("ConfirmEmail");
-            //    }
-            //return View();
         }
 
         public ActionResult Logout()

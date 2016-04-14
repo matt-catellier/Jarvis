@@ -4,19 +4,19 @@
     Layout = "~/Views/Shared/_AdminDashBoardTheme.cshtml";
 }
 
+@section Styles {
+    <style>
+        .row > h2 {
+            margin-left: 20px;
+            text-decoration: underline;
+        }
+    </style>
+}
+
 <div class="container-fluid">
     <div class="row">
-        <h2>Data</h2>
+        <h2> All Devices </h2>
         <div class="col-sm-8 clearfix page-content">
-            <div class="row col-sm-12">
-                <h1 class="col-sm-6" style="text-decoration: underline;">Your Devices </h1>
-            </div>
-            <div class="row col-sm-12">
-
-                @Html.Partial("Partials/_Graphs_Bar1")
-
-
-            </div>
             <div class="row col-sm-12">
                 <!-- COLUMN ONE -->
                 <div class="col-sm-4" style="background-color: white;">
@@ -25,7 +25,7 @@
                     <p>7:04 AM Coffee Machine Auto-off.</p>
                     <p>6:30 AM Kitchen Light Auto-on.</p>
                     <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
-                    <p>... Monitor More Recent Events ...</p>
+                    <p>...</p>
 
                 </div>
 
@@ -40,7 +40,7 @@
                     <p>Smoke Detectors: 6</p>
                     <p>Security Cameras: 4</p>
                     <p>Door Locks: </p>
-                    <p>... Click for more ...</p>
+                    <p>...</p>
                 </div>
 
                 <!-- COLUMN THREE -->
@@ -56,21 +56,11 @@
         <div class="col-sm-4 side-bar">
             <div class="row col-sm-12">
                 <div class="col-sm-12">
-
                     <h2>Total Consumption</h2>
                     <p>Electricity Consumption (2015): 480 KW/h</p>
                     <p>Water Consumption (2015): 1660L</p>
                     <p>Natural Gas Consumption (2015): 35 GJ</p>
                 </div>
-                <div class="col-sm-12">
-                    <h2>Integration with Suppliers</h2>
-                    <p>Grocery Deliveries</p>
-                    <p>Cleaning Supplies</p>
-                    <p>Add a new supplier</p>
-                </div>
-
-                <hr>
-
             </div>
         </div>
     </div>
