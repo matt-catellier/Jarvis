@@ -195,10 +195,6 @@ footer a:hover{
         }
  /* LOGIN PAGE */
 
- #errorMessage{
-     text-align: center;
-     margin-top: 20px;
- }
  #errorSpan{
      border:2px solid #be4e48;
  }

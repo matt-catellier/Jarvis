@@ -66,12 +66,12 @@
             </div>
         </div>
     </div>
-    <div>
+    <div id="error-message">
         @{
             if (ViewBag.Error != null)
             {
                 <div style="text-align:center">
-                    <span class="alert alert-danger">
+                    <span class="alert alert-danger" id="errorSpan">
                         <span class="glyphicon glyphicon-remove-circle"> </span> @Html.Raw(ViewBag.Error)
                     </span>
                 </div>
