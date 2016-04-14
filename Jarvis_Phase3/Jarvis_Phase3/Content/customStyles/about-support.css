@@ -66,16 +66,14 @@ section {
 }
 
 
-.contact .container-fluid {
-      /*margin-left: 20%; */
+.contact .container-fluid div {
+      height: 100%;
 }
 
-
-
-        #contact  {
-            /* margin-left: 10%; */
-                margin: auto;
-        }
+#contact  {
+     /* margin-left: 10%; */
+     margin: auto;
+}
 
 
 
@@ -84,7 +82,7 @@ section {
 }*/
 
 
-.opac-black {
-    
-}
+.form-group #messageTextArea {
+    width: 100%;
 
+}

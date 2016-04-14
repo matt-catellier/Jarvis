@@ -1,5 +1,5 @@
 ﻿@{
-    ViewBag.Title = "About Us";
+    ViewBag.Title = "About & Support";
     Layout = "~/Views/Shared/_ScrollTheme.cshtml";
 }
 
@@ -148,92 +148,95 @@
         <div class="row">
             <div class="col-md-5 opac-black" style="margin: 15px;">
 
-                    <h1>Contact Us</h1>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.6361144886314!2d-123.11724896765571!3d49.28329198531329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE2JzU5LjkiTiAxMjPCsDA2JzU1LjUiVw!5e0!3m2!1sen!2sca!4v1460515709746"
-                            width="80%"
-                            height="400px"
-                            frameborder="0"
-                            style="border:0"
-                            allowfullscreen></iframe>
-                    <h2>Jarvis World Headquarters</h2>
-                    <h2>555 Seymour St, Vancouver, BC V6B, Canada</h2>
-                </div>
-
-
-                <div class="col-md-5 opac-black" style="margin: 15px;">
-                    <form id="register" class="form-horizontal col-sm-12" action="#" enctype="multipart/form-data" method="post">
-                        <fieldset>
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="firstName">First Name:</label>
-                                <div class="col-sm-9">
-                                    <input type="text"
-                                           name="firstName"
-                                           ng-model="firstName.text"
-                                           class="form-control"
-                                           placeholder="Pat"
-                                           required />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="lastName">Last Name:</label>
-                                <div class="col-sm-9">
-                                    <input type="text"
-                                           name="lastName"
-                                           ng-model="lastName.text"
-                                           class="form-control"
-                                           placeholder="McGee"
-                                           required />
-                                </div>
-                            </div>
-
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="email">Email:</label>
-                                <div class="col-sm-9">
-                                    <input id="email"
-                                           class="form-control"
-                                           name="email"
-                                           type="email"
-                                           ng-model="email.txt"
-                                           placeholder="pmcgee&#064gmail.com"
-                                           required />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="subject">Subject: </label>
-                                <div class="col-sm-9">
-
-                                    <input type="text"
-                                           name="subject"
-                                           ng-model="subject.text"
-                                           class="form-control"
-                                           placeholder="Please be specific." />
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="control-label col-sm-3" for="lastName">Message:</label>
-                                <div class="col-sm-9">
-                                    <textarea id="messageTextArea"
-                                              name="message"
-                                              ng-model="message.body"
-                                              class="form-control"
-                                              ng-required="true"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-9">
-                                    <div class="g-recaptcha inp50" data-sitekey="6LfH2xcTAAAAAKXqeM6VL84Z319asFJcL4s2-Ehb"></div>
-                                    <input name="submit" type="submit" value="Sign-up" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("#", "#")';return false;" />
-                                    @Html.Raw(ViewBag.CaptchaResponse)
-                                </div>
-                            </div>
-                        </fieldset>
-                    </form>
-                </div>
+                <h1>Contact Us</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2602.6361144886314!2d-123.11724896765571!3d49.28329198531329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDE2JzU5LjkiTiAxMjPCsDA2JzU1LjUiVw!5e0!3m2!1sen!2sca!4v1460515709746"
+                        width="80%"
+                        height="400px"
+                        frameborder="0"
+                        style="border:0"
+                        allowfullscreen></iframe>
+                <h2>Jarvis World Headquarters</h2>
+                <h2>Seymour St, Vancouver, BC V6B, Canada</h2>
             </div>
 
+
+            <div class="col-md-5 opac-black" style="margin: 15px;">
+                <form id="register" class="form-horizontal col-sm-12" action="#" enctype="multipart/form-data" method="post">
+                    <fieldset>
+                        <br><br>
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="firstName">First Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text"
+                                       name="firstName"
+                                       ng-model="firstName.text"
+                                       class="form-control"
+                                       placeholder="Pat"
+                                       required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="lastName">Last Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text"
+                                       name="lastName"
+                                       ng-model="lastName.text"
+                                       class="form-control"
+                                       placeholder="McGee"
+                                       required />
+                            </div>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="email">Email:</label>
+                            <div class="col-sm-9">
+                                <input id="email"
+                                       class="form-control"
+                                       name="email"
+                                       type="email"
+                                       ng-model="email.txt"
+                                       placeholder="pmcgee&#064gmail.com"
+                                       required />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="subject">Subject: </label>
+                            <div class="col-sm-9">
+
+                                <input type="text"
+                                       name="subject"
+                                       ng-model="subject.text"
+                                       class="form-control"
+                                       placeholder="Please be specific." />
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-sm-3" for="lastName">Message:</label>
+                            <div class="col-sm-9">
+                                <textarea id="messageTextArea"
+                                          name="message"
+                                          ng-model="message.body"
+                                          class="form-control"
+                                          ng-required="true"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-9">
+                                <div class="g-recaptcha inp50" data-sitekey="6LfH2xcTAAAAAKXqeM6VL84Z319asFJcL4s2-Ehb"></div>
+                                <input name="submit" type="submit" value="Sign-up" class="btn btn-primary btn-lg btn-block" onclick="location.href='@Url.Action("#", "#")';return false;" />
+                                @Html.Raw(ViewBag.CaptchaResponse)
+
+                                <br><br>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </section>
