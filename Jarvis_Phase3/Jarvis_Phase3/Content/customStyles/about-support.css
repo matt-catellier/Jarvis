@@ -35,6 +35,18 @@ section {
     background-image: url('../../images/millions_of_icons.jpg');
     background-size: cover;
 }
+
+.about-section div {
+    margin-left: 10%;
+
+}
+
+.support-section {
+    background-color: #5bc0de;
+   /* background-image: url('../../images/half-tone_blue.jpg'); */
+    background-size: cover;
+}
+
 .support-section h1 {
     margin-bottom: 40px;
     margin-top: 50px;
@@ -42,17 +54,30 @@ section {
     top: 10px;
 }
 
+.support-section div {
+       margin-left: 10%;
+}
+
+
+
 .faq-section {
     background-image: url('../../images/desktop_laptop_tablet.jpg');
     background-size: cover;
 }
 
 
-.support-section {
-    background-color: #5bc0de;
-   /* background-image: url('../../images/half-tone_blue.jpg'); */
-    background-size: cover;
+.contact .container-fluid {
+      /*margin-left: 20%; */
 }
+
+
+
+        #contact  {
+            /* margin-left: 10%; */
+                margin: auto;
+        }
+
+
 
 /*fieldset {
     background-color: black; color: white; opacity: 0.8;
