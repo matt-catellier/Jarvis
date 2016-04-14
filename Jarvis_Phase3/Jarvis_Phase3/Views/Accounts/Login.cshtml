@@ -36,18 +36,18 @@
         </table>
     </div>
     <div class="col-sm-6">
-        <p> @*OTHER CONTENT*@ </p>
-    </div>
-    <div>
-        @{
-            if (ViewBag.Error != null)
-            {
-                <span class="alert alert-danger">
-                    <span class="glyphicon glyphicon-remove-circle"></span> @ViewBag.Error
-                </span>
+        <div id="error-message">
+            @{
+                if (ViewBag.Error != null)
+                {
+                    <span class="alert alert-danger" id="errorSpan">
+                        <span class="glyphicon glyphicon-remove-circle"></span> @ViewBag.Error
+                    </span>
+                }
             }
-        }
+        </div>
     </div>
+    
 </div>
 
 

@@ -83,7 +83,7 @@ namespace Jarvis_Phase3.Controllers
                 }
                 else
                 {
-                    ViewBag.Error = "Invalid username or password. Please try again.";
+                    ViewBag.Error = "Invalid username or password.";
                 }
             }
             return View();
@@ -113,7 +113,14 @@ namespace Jarvis_Phase3.Controllers
                 UserName = newUser.UserName,
                 Email = newUser.Email
             };
-
+            //var accountUser = new RegisteredUser()
+            //{
+            //    UserName = newUser.UserName,
+            //    FirstName = newUser.FirstName,
+            //    LastName = newUser.LastName,
+            //    Email = newUser.em
+            //};
+            
             IdentityResult result = manager.Create(identityUser, newUser.Password);
             JarvisEntities context = new JarvisEntities();
             AspNetUser user = context.AspNetUsers
@@ -122,12 +129,13 @@ namespace Jarvis_Phase3.Controllers
                              .Where(r => r.Name == "consumer").FirstOrDefault(); 
 
             //user roles is abridge table so can't select it directly
-            user.AspNetRoles.Add(role);
-            context.SaveChanges();
+            //user.AspNetRoles.Add(role);
+            //context.SaveChanges();
 
             if (result.Succeeded)
             {
-
+                user.AspNetRoles.Add(role);
+                context.SaveChanges();
 
                 CreateTokenProvider(manager, EMAIL_CONFIRMATION);
 
@@ -148,7 +156,7 @@ namespace Jarvis_Phase3.Controllers
             }
             else
             {
-                ViewBag.Error = "Oops, something whent wrong. Could not register new user. Please try again.";
+                ViewBag.Error = "Oops, something went wrong. Could not register new user. Please try again.";
                 return View();
             }
         }
