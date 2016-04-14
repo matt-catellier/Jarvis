@@ -83,7 +83,7 @@ namespace Jarvis_Phase3.Controllers
                 }
                 else
                 {
-                    ViewBag.Error = "Invalid username or password. Please try again.";
+                    ViewBag.Error = "Invalid username or password.";
                 }
             }
             return View();

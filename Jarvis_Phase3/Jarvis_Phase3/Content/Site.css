@@ -171,8 +171,6 @@ footer a:hover{
 
 .transparent-box {
     float: left;
-
-
 }
 
 /* TABLES */
@@ -195,3 +193,35 @@ footer a:hover{
         .panel-yellow .table tbody > tr > td, .panel-yellow .table tbody > tr > th  {
             border-color: #f0ad4e;
         }
+ /* LOGIN PAGE */
+
+ #errorMessage{
+     text-align: center;
+     margin-top: 20px;
+ }
+ #errorSpan{
+     border:2px solid #be4e48;
+ }
+ #error-message{
+    text-align: center;
+    margin-top: 20px;
+    
+     animation:error-message 5s 1;
+    -webkit-animation:error-message 5s 1;
+    animation-fill-mode: forwards;
+    
+    animation-delay:1s;
+    -webkit-animation-delay:10s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+    
+} 
+
+@keyframes error-message{
+    from {opacity :1;}
+    to {opacity :0;}
+}
+
+@-webkit-keyframes error-message{
+    from {opacity :1;}
+    to {opacity :0;}
+}
