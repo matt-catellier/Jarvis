@@ -2,20 +2,39 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_ScrollTheme.cshtml";
 }
+
+@section Styles {
+    <style>
+        .links div {
+            padding: 0px;
+        }
+
+        .links {
+            color: white;
+        }
+
+        .opac-black {
+            padding-bottom: 40px;
+        }
+
+    </style>
+}
 <div class="home-page clearfix">
     <div class="col-sm-12 home-writeup">
-        <div class="col-sm-6">
+        <div class="col-sm-6 opac-black clearfix">
             <h1> Jarvis - Smart Butler </h1>
             <h4> Manage all your smart devices through a single dashboard. </h4>
             <h4> View device data and power usage for each device. </h4>
             <h4> See the cost of each device. </h4>
             <h4> Use our insights to cut down on costs. </h4>
-            <div class="links">
+            <div class="links clearfix">
                 <div class="col-sm-6">
-                    @Html.ActionLink("Login >", "Login", "Accounts")
-                </div>
-                <div class="col-sm-6">
-                    <a href="@Url.Action("Register", "Accounts")"> Register ></a>
+                    <div class="col-sm-12">
+                        @Html.ActionLink("Login >", "Login", "Accounts")
+                    </div>
+                    <div class="col-sm-12">
+                        <a href="@Url.Action("Register", "Accounts")"> Register ></a>
+                    </div>
                 </div>
             </div>
         </div>
