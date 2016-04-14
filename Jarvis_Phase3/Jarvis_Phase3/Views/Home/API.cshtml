@@ -22,7 +22,7 @@ function sendRequest() {
         type: 'get',
         url: serviceUrl
     }).done(function (data) {
-        $('#devices').replaceWith("<ul id='devices' />")
+        $('#devices').replaceWith("<ul id='device2s' />")
         for (var i = 0; i < data.devices.length; i++) {
             callback(data.devices[i]);
         }
@@ -31,7 +31,7 @@ function sendRequest() {
     });
 }
 function callback(val) {
-    $("#value").replaceWith("<ul id='devices' />");
+    $("#value").replaceWith("<ul id='devic22' />");
     var str = "Category: " + val.category + " - Provider: " + val.provider;
     $('<li />', { text: str }).appendTo($('#devices'));
 }  
@@ -42,7 +42,7 @@ function callback(val) {
         <form method="get" action="api/Devices">
             <input type="button" value="Get" onclick="sendRequest()" /> <br />
             <div style="border: 1px solid black; min-height: 100px; margin: 10px; padding: 10px;">
-                <span id="value">(Result)<br /></span>
+                <span id="results">(Result)<br /></span>
             </div>
         </form>
     </div>
