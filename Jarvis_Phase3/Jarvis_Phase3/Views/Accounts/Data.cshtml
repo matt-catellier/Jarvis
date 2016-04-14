@@ -6,62 +6,76 @@
 
 @section Styles {
     <style>
+        .row {
+            padding: 10px;
+        }
+
         .row > h2 {
             margin-left: 20px;
             text-decoration: underline;
+        }
+
+        .panel {
+            margin-top: 10px;
         }
     </style>
 }
 
 <div class="container-fluid">
     <div class="row">
-        <h2> All Devices </h2>
-        <div class="col-sm-8 clearfix page-content">
-            <div class="row col-sm-12">
-                <!-- COLUMN ONE -->
-                <div class="col-sm-4" style="background-color: white;">
-                    <h3>Event Monitor</h3>
-                    <p>7:45 AM Front Door Auto-lock engaged.</p>
-                    <p>7:04 AM Coffee Machine Auto-off.</p>
-                    <p>6:30 AM Kitchen Light Auto-on.</p>
-                    <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
-                    <p>...</p>
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-database"></i> All Devices  </h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-8 clearfix page-content">
+                    <div class="row col-sm-12">
+                        <!-- COLUMN ONE -->
+                        <div class="col-sm-4" style="background-color: white;">
+                            <h3>Event Monitor</h3>
+                            <p>7:45 AM Front Door Auto-lock engaged.</p>
+                            <p>7:04 AM Coffee Machine Auto-off.</p>
+                            <p>6:30 AM Kitchen Light Auto-on.</p>
+                            <p>6:00 AM Thermostats 4, 5 Auto-on 26 degrees.</p>
+                            <p>...</p>
 
+                        </div>
+
+                        <!-- COLUMN TWO -->
+                        <div class="col-sm-4" style="background-color:#e5f7ff;">
+                            <h3>Devices</h3>
+                            <p>Devices currently online: 75</p>
+                            <p>Lights: 24</p>
+                            <p>Coffee Machines: 1</p>
+                            <p>Refrigerators: 2</p>
+                            <p>Thermostats: 7</p>
+                            <p>Smoke Detectors: 6</p>
+                            <p>Security Cameras: 4</p>
+                            <p>Door Locks: </p>
+                            <p>...</p>
+                        </div>
+
+                        <!-- COLUMN THREE -->
+                        <div class="col-sm-4">
+                            <h3>Scheduled Events</h3>
+                            <p>Coffee Machine: Daily 7 AM On.</p>
+                            <p>Lights: Daily 10 PM Off.</p>
+                            <p>Thermostats 4, 5 Daily Auto-on 26 degrees</p>
+                            <p>...<p>
+                        </div>
+                    </div>
                 </div>
-
-                <!-- COLUMN TWO -->
-                <div class="col-sm-4" style="background-color:#e5f7ff;">
-                    <h3>Devices</h3>
-                    <p>Devices currently online: 75</p>
-                    <p>Lights: 24</p>
-                    <p>Coffee Machines: 1</p>
-                    <p>Refrigerators: 2</p>
-                    <p>Thermostats: 7</p>
-                    <p>Smoke Detectors: 6</p>
-                    <p>Security Cameras: 4</p>
-                    <p>Door Locks: </p>
-                    <p>...</p>
-                </div>
-
-                <!-- COLUMN THREE -->
-                <div class="col-sm-4">
-                    <h3>Scheduled Events</h3>
-                    <p>Coffee Machine: Daily 7 AM On.</p>
-                    <p>Lights: Daily 10 PM Off.</p>
-                    <p>Thermostats 4, 5 Daily Auto-on 26 degrees</p>
-                    <p>...<p>
+                <div class="col-sm-4 side-bar">
+                    <div class="row col-sm-12">
+                        <div class="col-sm-12">
+                            <h2>Total Consumption</h2>
+                            <p>Electricity Consumption (2015): 480 KW/h</p>
+                            <p>Water Consumption (2015): 1660L</p>
+                            <p>Natural Gas Consumption (2015): 35 GJ</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-4 side-bar">
-            <div class="row col-sm-12">
-                <div class="col-sm-12">
-                    <h2>Total Consumption</h2>
-                    <p>Electricity Consumption (2015): 480 KW/h</p>
-                    <p>Water Consumption (2015): 1660L</p>
-                    <p>Natural Gas Consumption (2015): 35 GJ</p>
-                </div>
-            </div>
-        </div>
+        </div>   
     </div>
 </div>

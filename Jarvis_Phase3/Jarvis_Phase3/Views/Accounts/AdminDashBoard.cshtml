@@ -19,22 +19,31 @@
         h3 {
             margin-left: 20px;
         }
+
+
     </style> 
 }
 <div class="row">
-    <div class="col-sm-12 page-content">
-        <h2 style="margin-bottom: 40px; margin-left: 10px;">@Html.Raw(ViewBag.Title)</h2>
+    <div class="col-sm-12 page-content clearfix">
         <div class="col-sm-6 clearfix">
-            <a class="btn btn-primary view-all" href="@Url.Action("ViewAllConsumerAccounts")"> View All</a>
-            <h3> Users </h3>
-            @Html.Partial("Partials/_Graphs_Area1")
-        </div>
-        <div class="col-sm-6">
-                <a class="btn btn-primary view-all" href="@Url.Action("Data")"> View All</a>
-                <h3> Devices </h3>
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-user"></i> Users  </h3>
+                </div>          
+                @Html.Partial("Partials/_Graphs_Area1")
+                </div>
+            </div>
+        <div class="col-sm-6 clearfix">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <h3 class="panel-title"><i class="fa fa-plug"></i> Devices  </h3>
+                </div>
                 @Html.Partial("Partials/_Graphs_Donut1")
-        </div>
+            </div>
+         </div>
     </div>
+
+
 </div>
 
 

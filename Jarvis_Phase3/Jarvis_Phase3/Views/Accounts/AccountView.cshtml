@@ -22,6 +22,14 @@
             font-size: 24px;
          }
 
+         .user-info {
+             padding: 10px;
+         }
+
+         .user-info span {
+            font-weight: bold;
+         }
+
     </style>
 }
 <div class="row">
@@ -33,18 +41,12 @@
                     <a href="@Url.Action("EditAccount", "Accounts", null )">Edit  <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
-            <table class="table table-condensed table-responsive">
-                <tr>
-                    <td>
-                        <ul>
-                            <li>User Name: @Model.UserName</li>
-                            <li>First Name: @Model.FirstName </li>
-                            <li>Last Name: @Model.LastName </li>
-                            <li>Email: @Model.Email</li>
-                        </ul>
-                    </td>
-                </tr>
-            </table>
+            <div class="user-info clearfix">
+                <p class="username col-sm-6"><span>User Name:</span> @Model.UserName </p>
+                <p class="email col-sm-6"><span>Email</span> @Model.Email </p>
+                <p class="first col-sm-6"><span>First Name:</span> @Model.FirstName </p>
+                <p class="last col-sm-6"><span>Last Name:</span> @Model.LastName  </p>             
+            </div>
         </div>
     </div>
 </div>

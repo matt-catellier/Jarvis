@@ -6,23 +6,29 @@
 
 @section Styles {
     <style>
-        #page-wrapper {
-            height: 800px;
-        } 
         button.dropdown-toggle {
             background: #5bc0de;
         }
         .row h1 {
             margin-left: 20px;
         }
+        .panel-body {
+            padding: 10px;
+        }
+
     </style>
 }
-
 <div class="container-fluid">
     <div class="row">
-        <h1> Provider Account </h1>
-        <div class="col-sm-8">
-            @Html.Partial("Partials/LoginForm")
-        </div>        
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                <h3 class="panel-title"><i class="fa fa-plug"></i> Register Device </h3>
+            </div>
+            <div class="panel-body">
+                <div class="col-sm-6">
+                    @Html.Partial("Partials/LoginForm")
+                </div>
+            </div>
+        </div>
     </div>
 </div>

@@ -868,6 +868,7 @@ C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.xml
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\bin\System.Web.Http.WebHost.xml
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csproj.App.config
-C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.csprojResolveAssemblyReference.cache
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.dll
 C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\obj\Debug\Jarvis_Phase3.pdb
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.CodeAnalysisLog.xml
+C:\Users\Matt Catellier\Desktop\ProjectPhase3\devRepo_final\Jarvis_Phase3\Jarvis_Phase3\bin\Jarvis_Phase3.dll.lastcodeanalysissucceeded

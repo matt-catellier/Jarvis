@@ -120,18 +120,7 @@
                     -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        @{
-                            // try based on role IDs User.IsInRole("admin")
-                            if (User.Identity.IsAuthenticated && ViewBag.Role == "admin")
-                            {
-                                <li><a class="page-scroll" href="@Url.Action("AdminDashBoard", "Accounts")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-
-                            }
-                            else if (User.Identity.IsAuthenticated && ViewBag.Role == "consumer")
-                            {
-                                <li><a class="page-scroll" href="@Url.Action("ConsumerDashboard2")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
-                            }
-                        }
+                        <li><a class="page-scroll" href="@Url.Action("ConsumerDashboard2")"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a></li>
                         <li>
                             <a href="@Url.Action("AccountView")"><i class="fa fa-fw fa-user"></i> Account </a>
                         </li>
@@ -140,7 +129,6 @@
                         </li>
                     </ul>
                 </div>
-
             <!-- /.navbar-collapse -->
         </nav>
         <div id="page-wrapper">
